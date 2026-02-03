@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Joshua Darron Phillips</title>
+    <meta name="description" content="Developer Relations Engineer focused on AI, data, and privacy.">
+    <link rel="shortcut icon" type="image/png" href="../joshuaDarronPortfolio/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --accent: #FFCE00;
+            --bg: #111111;
+            --bg-card: #1a1a1a;
+            --bg-card-hover: #222222;
+            --border: rgba(255,255,255,0.08);
+            --text: #ffffff;
+            --text-muted: rgba(255,255,255,0.5);
+            --text-secondary: rgba(255,255,255,0.7);
+            --nav-height: 72px;
+            --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+            --font-serif: 'Playfair Display', Georgia, serif;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: var(--font-sans);
+            color: var(--text);
+            background: var(--bg);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* NAV */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: var(--nav-height);
+            background: rgba(17,17,17,0.9);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 3rem;
+            z-index: 100;
+            border-bottom: 1px solid var(--border);
+        }
+        .nav-brand {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            text-decoration: none;
+            letter-spacing: 0.01em;
+        }
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 1.75rem;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            font-weight: 400;
+            transition: color 0.2s;
+        }
+        .nav-links a:hover { color: var(--text); }
+        .nav-sep {
+            color: var(--text-muted);
+            font-size: 0.75rem;
+            user-select: none;
+        }
+
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text);
+            font-size: 1.25rem;
+            cursor: pointer;
+        }
+
+        /* SECTIONS */
+        section { padding: 6rem 2rem; }
+        .container { max-width: 900px; margin: 0 auto; }
+
+        /* HERO */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding-top: var(--nav-height);
+            padding-bottom: 4rem;
+        }
+        .hero-avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--border);
+            margin-bottom: 1.5rem;
+        }
+        .hero-greeting {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            margin-bottom: 1.25rem;
+            font-weight: 400;
+        }
+        @keyframes shimmer {
+            0% { background-position: -600px 0; }
+            100% { background-position: 600px 0; }
+        }
+        .hero h1 {
+            font-family: var(--font-serif);
+            font-size: 3.5rem;
+            font-weight: 400;
+            line-height: 1.15;
+            margin-bottom: 2.5rem;
+            max-width: 650px;
+            letter-spacing: -0.01em;
+            background: linear-gradient(
+                90deg,
+                #ffffff 0%,
+                #ffffff 35%,
+                #b0b0b0 50%,
+                #ffffff 65%,
+                #ffffff 100%
+            );
+            background-size: 600px 100%;
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            animation: shimmer 10s ease-in-out infinite;
+        }
+        .hero h1 strong {
+            font-weight: 700;
+            color: inherit;
+        }
+        .hero h1 em {
+            font-style: italic;
+            color: inherit;
+        }
+        .btn-outline {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.7rem 1.5rem;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            color: var(--text);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 500;
+            transition: border-color 0.2s, background 0.2s;
+            background: transparent;
+        }
+        .btn-outline:hover {
+            border-color: rgba(255,255,255,0.25);
+            background: rgba(255,255,255,0.04);
+        }
+        .btn-outline svg {
+            width: 14px;
+            height: 14px;
+            stroke: currentColor;
+            fill: none;
+            stroke-width: 2;
+        }
+
+        /* COMPANIES / EXPERIENCE LOGOS BAR */
+        .companies-bar {
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+            padding: 2.5rem 2rem;
+        }
+        .companies-bar .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+        }
+        .company-name {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            letter-spacing: 0.02em;
+            white-space: nowrap;
+        }
+
+        /* SERVICES / SKILLS SECTION */
+        .services {
+            text-align: center;
+        }
+        .services-heading {
+            font-family: var(--font-serif);
+            font-size: 2.25rem;
+            font-weight: 400;
+            line-height: 1.25;
+            max-width: 550px;
+            margin: 0 auto 3rem;
+        }
+        .services-heading strong { font-weight: 700; }
+        .services-heading em { font-style: italic; }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.25rem;
+        }
+        .service-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 2rem 1.5rem;
+            text-align: left;
+            transition: border-color 0.2s, background 0.2s;
+        }
+        .service-card:hover {
+            border-color: rgba(255,255,255,0.15);
+            background: var(--bg-card-hover);
+        }
+        .service-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            background: rgba(255,255,255,0.05);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.25rem;
+        }
+        .service-icon svg {
+            width: 18px;
+            height: 18px;
+            stroke: var(--text-secondary);
+            fill: none;
+            stroke-width: 1.5;
+        }
+        .service-card h3 {
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        .service-card p {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            line-height: 1.5;
+        }
+
+        /* PROFILE / ABOUT */
+        .about {
+            border-top: 1px solid var(--border);
+        }
+        .about-grid {
+            display: grid;
+            grid-template-columns: 250px 1fr;
+            gap: 3rem;
+            align-items: start;
+        }
+        .about-photo {
+            width: 250px;
+            height: 250px;
+            border-radius: 16px;
+            object-fit: cover;
+            border: 1px solid var(--border);
+        }
+        .about-content h2 {
+            font-family: var(--font-serif);
+            font-size: 2rem;
+            font-weight: 400;
+            margin-bottom: 1.5rem;
+        }
+        .about-content h2 strong { font-weight: 700; }
+        .about-content p {
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+
+        /* EXPERIENCE */
+        .experience {
+            border-top: 1px solid var(--border);
+        }
+        .experience .section-label {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+        }
+        .exp-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.25rem;
+        }
+        .exp-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.75rem;
+            transition: border-color 0.2s, background 0.2s;
+        }
+        .exp-card:hover {
+            border-color: rgba(255,255,255,0.15);
+            background: var(--bg-card-hover);
+        }
+        .exp-card h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.35rem;
+        }
+        .exp-card .meta {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            font-weight: 500;
+            margin-bottom: 0.75rem;
+        }
+        .exp-card p {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            line-height: 1.55;
+        }
+
+        /* PORTFOLIO */
+        .portfolio {
+            border-top: 1px solid var(--border);
+        }
+        .portfolio .section-label {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+        }
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.25rem;
+        }
+        .project-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: border-color 0.2s, transform 0.2s, background 0.2s;
+        }
+        .project-card:hover {
+            border-color: rgba(255,255,255,0.15);
+            transform: translateY(-2px);
+            background: var(--bg-card-hover);
+        }
+        .project-card a {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+        .project-card .img-wrap {
+            position: relative;
+            overflow: hidden;
+        }
+        .project-card .img-wrap::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(30,30,30,0.6);
+            transition: opacity 0.3s;
+        }
+        .project-card:hover .img-wrap::after {
+            opacity: 0;
+        }
+        .project-card img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            display: block;
+            border-bottom: 1px solid var(--border);
+        }
+        .project-card .card-body {
+            padding: 1.25rem;
+        }
+        .project-card .card-body h3 {
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+        .project-card .card-body p {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+        .project-tags {
+            display: flex;
+            gap: 0.4rem;
+            flex-wrap: wrap;
+            margin-top: 0.65rem;
+        }
+        .project-tags span {
+            font-size: 0.7rem;
+            background: rgba(255,255,255,0.06);
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
+            color: var(--text-muted);
+            border: 1px solid var(--border);
+        }
+
+        /* CONTACT CTA */
+        .contact {
+            border-top: 1px solid var(--border);
+            text-align: center;
+            padding: 8rem 2rem;
+        }
+        .contact h2 {
+            font-family: var(--font-serif);
+            font-size: 3rem;
+            font-weight: 400;
+            line-height: 1.15;
+            margin-bottom: 2rem;
+        }
+        .contact h2 strong { font-weight: 700; }
+        .contact-email {
+            display: inline-block;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 2.5rem;
+        }
+        .contact-email a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 1px;
+            transition: color 0.2s, border-color 0.2s;
+        }
+        .contact-email a:hover {
+            color: var(--text);
+            border-color: var(--text-muted);
+        }
+        .contact-links {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+        .contact-links a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+            color: var(--text);
+            font-size: 0.85rem;
+            font-weight: 500;
+            padding: 0.7rem 1.5rem;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            transition: border-color 0.2s, background 0.2s;
+        }
+        .contact-links a:hover {
+            border-color: rgba(255,255,255,0.25);
+            background: rgba(255,255,255,0.04);
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            border-top: 1px solid var(--border);
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            nav { padding: 0 1.5rem; }
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: var(--nav-height);
+                left: 0;
+                right: 0;
+                background: rgba(17,17,17,0.98);
+                backdrop-filter: blur(12px);
+                flex-direction: column;
+                padding: 1.5rem;
+                border-bottom: 1px solid var(--border);
+                gap: 1rem;
+            }
+            .nav-links.open { display: flex; }
+            .nav-sep { display: none; }
+            .menu-toggle { display: block; }
+
+            .hero h1 { font-size: 2.25rem; }
+            .hero-avatar { width: 80px; height: 80px; }
+            .services-grid { grid-template-columns: 1fr 1fr; }
+            .about-grid { grid-template-columns: 1fr; justify-items: center; text-align: center; }
+            .about-photo { width: 200px; height: 200px; }
+            .exp-grid { grid-template-columns: 1fr; }
+            .project-grid { grid-template-columns: 1fr 1fr; }
+            .contact h2 { font-size: 2rem; }
+            .contact-links { flex-direction: column; align-items: center; }
+            .companies-bar .container { gap: 1.5rem; }
+        }
+
+        @media (max-width: 480px) {
+            .services-grid { grid-template-columns: 1fr; }
+            .project-grid { grid-template-columns: 1fr; }
+            .hero h1 { font-size: 1.85rem; }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="#home" class="nav-brand">phillips@joshuadarron.com</a>
+    <div class="nav-links" id="navLinks">
+        <a href="#about">Profile</a>
+        <span class="nav-sep">/</span>
+        <a href="#experience">Experience</a>
+        <span class="nav-sep">/</span>
+        <a href="#portfolio">Portfolio</a>
+        <span class="nav-sep">/</span>
+        <a href="#contact">Contact</a>
+        <span class="nav-sep">/</span>
+        <a href="../joshuaDarronPortfolio/JoshuaPhillips.resume.pdf" target="_blank">Resume</a>
+    </div>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">&#9776;</button>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+    <img src="../joshuaDarronPortfolio/assets/img/profile.jpg" alt="Joshua Darron Phillips" class="hero-avatar">
+    <p class="hero-greeting">Hi, I'm Joshua</p>
+    <h1>Building <strong>digital products,</strong> <em>brands,</em> and <strong>experience.</strong></h1>
+    <a href="../joshuaDarronPortfolio/JoshuaPhillips.resume.pdf" target="_blank" class="btn-outline">
+        View Resume
+        <svg viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+    </a>
+</section>
+
+<!-- COMPANIES BAR -->
+<div class="companies-bar">
+    <div class="container">
+        <span class="company-name">RocketRide AI</span>
+        <span class="company-name">Aparavi</span>
+        <span class="company-name">HOTB Software</span>
+        <span class="company-name">Nihon Kohden</span>
+        <span class="company-name">Rogue Cloud</span>
+    </div>
+</div>
+
+<!-- SERVICES -->
+<section class="services">
+    <div class="container">
+        <p class="services-heading"><strong>Collaborate</strong> with brands and <em>agencies</em> to create <strong>impactful results.</strong></p>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+                </div>
+                <h3>Developer Relations</h3>
+                <p>Bridging engineering with education, advocacy, and developer community engagement.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+                </div>
+                <h3>Full-Stack Engineering</h3>
+                <p>Building robust web applications with Node.js, React, SQL, and cloud infrastructure.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+                </div>
+                <h3>Data & AI Systems</h3>
+                <p>Privacy-aware and local-first AI systems that give users ownership over their data.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                </div>
+                <h3>Backend Systems</h3>
+                <p>Data-intensive applications, streaming APIs, and enterprise-grade backend architecture.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+    <div class="container">
+        <div class="about-grid">
+            <img src="../joshuaDarronPortfolio/assets/img/profile.jpg" alt="Joshua Darron Phillips" class="about-photo">
+            <div class="about-content">
+                <h2>Developer Relations Engineer from the <strong>Golden State</strong></h2>
+                <p>I'm a Developer Relations Engineer and software builder focused on AI, data, and privacy. I come from a full-stack engineering background, with a particular love for backend systems, data-intensive applications, and solving hard problems that live just beneath the surface.</p>
+                <p>I've spent my career working on platforms that move, protect, and make sense of large volumes of data -- across industries like healthcare and enterprise data intelligence.</p>
+                <p>I'm especially interested in privacy-aware and local-first AI systems, and in tools that give users ownership over their data rather than treating it as a resource to extract.</p>
+                <p>If you're working on thoughtful AI, developer tools, or data systems -- and care about doing it the right way -- I'd love to connect.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section class="experience" id="experience">
+    <div class="container">
+        <p class="section-label">Experience</p>
+        <div class="exp-grid">
+            <div class="exp-card">
+                <h3>RocketRide AI Inc.</h3>
+                <div class="meta">Developer Relations Engineer &middot; San Francisco &middot; 2026 - Current</div>
+                <p>Lead developer-facing initiatives to support adoption of RocketRide's AI pipeline platform. Design sample applications, reference architectures, and end-to-end use cases demonstrating real-world AI workflows.</p>
+            </div>
+            <div class="exp-card">
+                <h3>Aparavi Software AG</h3>
+                <div class="meta">Software Engineer &middot; Santa Monica &middot; 2022 - 2026</div>
+                <p>Led major initiatives to introduce new features to the data intelligence automation platform using Node.js, SQL databases, and React.js. Delivered innovative data management and protection solutions.</p>
+            </div>
+            <div class="exp-card">
+                <h3>HOTB Software</h3>
+                <div class="meta">Software Engineer &middot; Irvine &middot; 2020 - 2022</div>
+                <p>Developed enterprise-grade software using Node.js, MSSQL, PostgreSQL, React, and AWS. Built internal systems for order management, revenue reporting, and production workflow tracking.</p>
+            </div>
+            <div class="exp-card">
+                <h3>Nihon Kohden</h3>
+                <div class="meta">Software Engineer &middot; Irvine &middot; 2020 - 2021</div>
+                <p>Architected data streaming APIs to receive medical monitoring data stored in MSSQL. Built frontend applications using Vue to display real-time data streams.</p>
+            </div>
+            <div class="exp-card">
+                <h3>Rogue Cloud</h3>
+                <div class="meta">Software Engineer &middot; San Juan Capistrano &middot; 2019</div>
+                <p>Automated business processes using Salesforce cloud platform. Developed enterprise-grade software and provided training and mentorship to junior engineers and interns.</p>
+            </div>
+            <div class="exp-card">
+                <h3>AppMakersLA</h3>
+                <div class="meta">Project Manager Intern &middot; Los Angeles &middot; 2016</div>
+                <p>Assisted with facilitation of full-stack application development. Monitored project progress and workflow while participating in client meetings.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section class="portfolio" id="portfolio">
+    <div class="container">
+        <p class="section-label">Portfolio</p>
+        <div class="project-grid">
+            <div class="project-card">
+                <a href="https://www.aparavi.com/" target="_blank">
+                    <div class="img-wrap"><img src="../joshuaDarronPortfolio/assets/img/portfolio/aparavi.png" alt="Aparavi"></div>
+                    <div class="card-body">
+                        <h3>Aparavi</h3>
+                        <p>Data intelligence automation platform</p>
+                        <div class="project-tags">
+                            <span>Node</span><span>React</span><span>SQL</span><span>AWS</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="project-card">
+                <a href="https://georgiarentalassistance.ga.gov/" target="_blank">
+                    <div class="img-wrap"><img src="../joshuaDarronPortfolio/assets/img/portfolio/ga-era.png" alt="Georgia Rental Assistance"></div>
+                    <div class="card-body">
+                        <h3>Georgia Rental Assistance</h3>
+                        <p>Government assistance platform</p>
+                        <div class="project-tags">
+                            <span>Node</span><span>React</span><span>SQL</span><span>AWS</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="project-card">
+                <a href="https://hotbsoftware.com/corecompli/" target="_blank">
+                    <div class="img-wrap"><img src="../joshuaDarronPortfolio/assets/img/portfolio/corecompli.png" alt="CoreCompli"></div>
+                    <div class="card-body">
+                        <h3>CoreCompli</h3>
+                        <p>Compliance platform</p>
+                        <div class="project-tags">
+                            <span>Node</span><span>SQL</span><span>AWS</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="project-card">
+                <a href="https://www.npmjs.com/package/mongooq" target="_blank">
+                    <div class="img-wrap"><img src="../joshuaDarronPortfolio/assets/img/portfolio/mongooq.png" alt="MongoOQ"></div>
+                    <div class="card-body">
+                        <h3>MongoOQ</h3>
+                        <p>NPM package for MongoDB</p>
+                        <div class="project-tags">
+                            <span>MongoDB</span><span>Node</span><span>NPM</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="project-card">
+                <a href="https://www.nkdhs.com/products.pl?waveform=true" target="_blank">
+                    <div class="img-wrap"><img src="../joshuaDarronPortfolio/assets/img/portfolio/nk-lab.png" alt="NK Lab"></div>
+                    <div class="card-body">
+                        <h3>NK Lab</h3>
+                        <p>Medical data waveform visualization</p>
+                        <div class="project-tags">
+                            <span>Node</span><span>Vue</span><span>SQL</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="project-card">
+                <a href="https://chromewebstore.google.com/detail/csviewer/khfkmjdhickeapmgolpnmebpppdjffnl" target="_blank">
+                    <div class="img-wrap"><img src="../joshuaDarronPortfolio/assets/img/portfolio/csviewer.png" alt="CSViewer"></div>
+                    <div class="card-body">
+                        <h3>CSViewer</h3>
+                        <p>Chrome extension for CSV files</p>
+                        <div class="project-tags">
+                            <span>Browser Extension</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+    <div class="container">
+        <h2>Tell me about your<br><strong>next project</strong></h2>
+        <p class="contact-email"><a href="mailto:phillips@joshuadarron.com">phillips@joshuadarron.com</a></p>
+        <div class="contact-links">
+            <a href="https://www.linkedin.com/in/joshuadarron/" target="_blank">
+                LinkedIn
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+            </a>
+            <a href="https://twitter.com/joshuadarron" target="_blank">
+                Twitter
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+            </a>
+            <a href="https://github.com/joshuadarron" target="_blank">
+                GitHub
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+            </a>
+        </div>
+    </div>
+</section>
+
+<footer>
+    &copy; 2026 Joshua Darron Phillips
+</footer>
+
+<script>
+    document.getElementById('menuToggle').addEventListener('click', function() {
+        document.getElementById('navLinks').classList.toggle('open');
+    });
+    document.querySelectorAll('.nav-links a').forEach(function(link) {
+        link.addEventListener('click', function() {
+            document.getElementById('navLinks').classList.remove('open');
+        });
+    });
+</script>
+
+</body>
+</html>
