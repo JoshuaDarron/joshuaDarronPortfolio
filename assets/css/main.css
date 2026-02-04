@@ -208,6 +208,20 @@ section {
 	white-space: nowrap;
 }
 
+.tech-name {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.6rem;
+	font-size: 0.9rem;
+	font-weight: 500;
+	color: #fff;
+	white-space: nowrap;
+}
+
+.tech-name svg {
+	flex-shrink: 0;
+}
+
 /* SERVICES / SKILLS SECTION */
 .services {
 	text-align: center;
