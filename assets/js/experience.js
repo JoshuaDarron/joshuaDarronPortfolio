@@ -190,6 +190,89 @@ function renderExperience() {
 		exp.title + " \u00B7 " + exp.location + " \u00B7 " + exp.period;
 	document.getElementById("companyDescription").textContent = exp.description;
 
+	// Update meta tags dynamically
+	var pageUrl = "https://joshuadarron.com/experience.html?company=" + slug;
+	var metaDesc = exp.title + " at " + exp.company + " (" + exp.period + ", " + exp.location + "). " + exp.description.substring(0, 150) + "...";
+
+	var descEl = document.getElementById("metaDescription");
+	if (descEl) descEl.setAttribute("content", metaDesc);
+
+	var canonicalEl = document.getElementById("canonicalLink");
+	if (canonicalEl) canonicalEl.setAttribute("href", pageUrl);
+
+	var ogTitleEl = document.getElementById("ogTitle");
+	if (ogTitleEl) ogTitleEl.setAttribute("content", exp.company + " — Joshua D. Phillips");
+
+	var ogDescEl = document.getElementById("ogDescription");
+	if (ogDescEl) ogDescEl.setAttribute("content", metaDesc);
+
+	var ogUrlEl = document.getElementById("ogUrl");
+	if (ogUrlEl) ogUrlEl.setAttribute("content", pageUrl);
+
+	var twitterTitleEl = document.getElementById("twitterTitle");
+	if (twitterTitleEl) twitterTitleEl.setAttribute("content", exp.company + " — Joshua D. Phillips");
+
+	var twitterDescEl = document.getElementById("twitterDescription");
+	if (twitterDescEl) twitterDescEl.setAttribute("content", metaDesc);
+
+	// Inject JSON-LD structured data
+	var jsonLd = {
+		"@context": "https://schema.org",
+		"@graph": [
+			{
+				"@type": "BreadcrumbList",
+				"itemListElement": [
+					{
+						"@type": "ListItem",
+						"position": 1,
+						"name": "Home",
+						"item": "https://joshuadarron.com/"
+					},
+					{
+						"@type": "ListItem",
+						"position": 2,
+						"name": "Experience",
+						"item": "https://joshuadarron.com/#experience"
+					},
+					{
+						"@type": "ListItem",
+						"position": 3,
+						"name": exp.company,
+						"item": pageUrl
+					}
+				]
+			},
+			{
+				"@type": "WebPage",
+				"name": exp.company + " — Joshua D. Phillips",
+				"url": pageUrl,
+				"isPartOf": { "@id": "https://joshuadarron.com/#website" },
+				"breadcrumb": { "@type": "BreadcrumbList" }
+			},
+			{
+				"@type": "OrganizationRole",
+				"roleName": exp.title,
+				"startDate": exp.period.split(" - ")[0],
+				"endDate": exp.period.split(" - ")[1] === "Current" ? undefined : exp.period.split(" - ")[1],
+				"description": exp.description,
+				"memberOf": {
+					"@type": "Organization",
+					"name": exp.company,
+					"address": {
+						"@type": "PostalAddress",
+						"addressLocality": exp.location.split(", ")[0],
+						"addressRegion": exp.location.split(", ")[1]
+					}
+				}
+			}
+		]
+	};
+
+	var scriptEl = document.createElement("script");
+	scriptEl.type = "application/ld+json";
+	scriptEl.textContent = JSON.stringify(jsonLd);
+	document.head.appendChild(scriptEl);
+
 	// Highlights
 	const highlightsList = document.getElementById("highlights");
 	exp.highlights.forEach(function (item) {
