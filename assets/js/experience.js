@@ -21,20 +21,7 @@ const experiences = {
 			"Docker",
 			"REST API",
 		],
-		projects: [
-			{
-				name: "AI Pipeline Starter Kit",
-				description:
-					"Reference implementation for building end-to-end AI pipelines including data ingestion, transformation, and deployment.",
-				tech: ["Python", "Docker", "REST API"],
-			},
-			{
-				name: "Developer Portal",
-				description:
-					"Interactive documentation site with live code examples and API explorer for platform onboarding.",
-				tech: ["TypeScript", "MDX"],
-			},
-		],
+		projects: [],
 	},
 	aparavi: {
 		company: "Aparavi Software AG",
@@ -60,16 +47,11 @@ const experiences = {
 		],
 		projects: [
 			{
-				name: "Data Classification Engine",
-				description:
-					"Automated data classification and policy system for enterprise compliance and governance.",
-				tech: ["Node.js", "SQL", "AWS"],
-			},
-			{
-				name: "Platform Feature Development",
-				description:
-					"End-to-end feature design and implementation for the data intelligence automation platform.",
-				tech: ["React", "TypeScript", "Node.js"],
+				name: "Aparavi",
+				description: "Data intelligence automation platform",
+				tech: ["Node", "React", "SQL", "AWS"],
+				image: "./assets/img/portfolio/aparavi.png",
+				link: "https://www.aparavi.com/",
 			},
 		],
 	},
@@ -100,15 +82,17 @@ const experiences = {
 		projects: [
 			{
 				name: "Georgia Rental Assistance",
-				description:
-					"Government assistance platform facilitating application and allotment of COVID-19 financial relief for households.",
-				tech: ["Node.js", "React", "SQL", "AWS"],
+				description: "Government assistance platform",
+				tech: ["Node", "React", "SQL", "AWS"],
+				image: "./assets/img/portfolio/ga-era.png",
+				link: "https://georgiarentalassistance.ga.gov/",
 			},
 			{
-				name: "Order & Revenue Systems",
-				description:
-					"Internal tools for order entry, management, conversion tracking, and revenue reporting.",
-				tech: ["Node.js", "MSSQL", "React"],
+				name: "CoreCompli",
+				description: "Compliance platform",
+				tech: ["Node", "SQL", "AWS"],
+				image: "./assets/img/portfolio/corecompli.png",
+				link: "https://hotbsoftware.com/corecompli/",
 			},
 		],
 	},
@@ -135,16 +119,11 @@ const experiences = {
 		],
 		projects: [
 			{
-				name: "Waveform Visualization",
-				description:
-					"Real-time frontend application for displaying medical monitoring data streams from patient equipment.",
-				tech: ["Vue.js", "Node.js", "MSSQL"],
-			},
-			{
-				name: "Telemetry Streaming API",
-				description:
-					"Data streaming API for continuous ingestion and analysis of medical device telemetry.",
-				tech: ["Node.js", "MSSQL", "REST"],
+				name: "NK Lab",
+				description: "Medical data waveform visualization",
+				tech: ["Node", "Vue", "SQL"],
+				image: "./assets/img/portfolio/nk-lab.png",
+				link: "https://www.nkdhs.com/products.pl?waveform=true",
 			},
 		],
 	},
@@ -168,14 +147,7 @@ const experiences = {
 			"JavaScript",
 			"Scrum",
 		],
-		projects: [
-			{
-				name: "Business Process Automation",
-				description:
-					"Salesforce-based automation tools streamlining enterprise business workflows and operations.",
-				tech: ["Salesforce", "Apex", "Lightning"],
-			},
-		],
+		projects: [],
 	},
 	appmakersla: {
 		company: "AppMakersLA",
@@ -195,14 +167,7 @@ const experiences = {
 			"Project Management",
 			"Agile",
 		],
-		projects: [
-			{
-				name: "Client Application Development",
-				description:
-					"Supported development and delivery of full-stack web applications for agency clients.",
-				tech: ["JavaScript", "HTML/CSS"],
-			},
-		],
+		projects: [],
 	},
 };
 
@@ -246,15 +211,34 @@ function renderExperience() {
 	if (exp.projects && exp.projects.length > 0) {
 		exp.projects.forEach(function (project) {
 			var card = document.createElement("div");
-			card.className = "detail-project-card";
+			card.className = "project-card";
+
+			var a = document.createElement("a");
+			if (project.link) {
+				a.href = project.link;
+				a.target = "_blank";
+			}
+
+			var imgWrap = document.createElement("div");
+			imgWrap.className = "img-wrap";
+			if (project.image) {
+				var img = document.createElement("img");
+				img.src = project.image;
+				img.alt = project.name;
+				imgWrap.appendChild(img);
+			}
+			a.appendChild(imgWrap);
+
+			var body = document.createElement("div");
+			body.className = "card-body";
 
 			var h3 = document.createElement("h3");
 			h3.textContent = project.name;
-			card.appendChild(h3);
+			body.appendChild(h3);
 
 			var p = document.createElement("p");
 			p.textContent = project.description;
-			card.appendChild(p);
+			body.appendChild(p);
 
 			if (project.tech && project.tech.length > 0) {
 				var tags = document.createElement("div");
@@ -264,9 +248,11 @@ function renderExperience() {
 					span.textContent = t;
 					tags.appendChild(span);
 				});
-				card.appendChild(tags);
+				body.appendChild(tags);
 			}
 
+			a.appendChild(body);
+			card.appendChild(a);
 			projectGrid.appendChild(card);
 		});
 	} else {
