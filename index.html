@@ -1,34 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>JDP</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="author" content="">
-
-    <link rel="shortcut icon" type="image/png" href="./favicon.ico" />
-    <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
-    <!-- Fonts from Font Awsome -->
-    <link rel="stylesheet" href="./assets/css/font-awesome.min.css">
-    <!-- Magnific popup -->
-    <link rel="stylesheet" href="./assets/css/magnific-popup.css">
-    <!-- Vegas slider -->
-    <link rel="stylesheet" href="./assets/css/vegas.min.css">
-    <!-- Custom styles for this template -->
-    <link rel="stylesheet" href="./assets/css/main.css">
-    <!-- Page color -->
-    <link rel="stylesheet" href="./assets/css/colors/yellow.css">
-
-    <!-- Feature detection -->
-    <script src="./assets/js/modernizr-2.6.2.min.js"></script>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Joshua D. Phillips</title>
+	<meta name="description" content="Developer Relations Engineer focused on AI, data, and privacy.">
+	<link rel="icon" type="image/svg+xml" href="./favicon.svg">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="./assets/css/main.css">
+	<link rel="stylesheet" href="./assets/css/animations.css">
 </head>
 
 <body>
-    <!-- 
+	<!-- 
     ==============================================
     CURIOUS ABOUT WHATS UNDER THE SURFACE, HUH? 😉
     PLEASE FEEL FREE TO SWIM AROUND THE CODE
@@ -64,516 +52,383 @@
     MEET SHERYL THE SHARK ⬆️ SHE DOESNT BITE
     ========================================
 -->
-    <div class="navbar navbar-default navbar-static-top" role="navigation">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                    data-target=".navbar-collapse">
-                    <span class="sr-only">
-                        Toggle navigation
-                    </span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav" id="main-menu">
-                    <li class='nav-link'>
-                        <a href="#page-welcome">
-                            Home
-                        </a>
-                    </li>
-                    <li class='nav-link'>
-                        <a href="#page-profile">
-                            Profile
-                        </a>
-                    </li>
-                    <li class='nav-link'>
-                        <a href="#page-experience">
-                            Experience
-                        </a>
-                    </li>
-                    <li class='nav-link'>
-                        <a href="#page-portfolio">
-                            Portfolio
-                        </a>
-                    </li>
-                    <li class='nav-link'>
-                        <a href="#page-contact">
-                            Contact
-                        </a>
-                    </li>
-                    <li class='nav-link'>
-                        <a href="./JoshuaPhillips.resume.pdf" class="new-link" target='_blank'>
-                            Resume
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <!--/.nav-collapse -->
-        </div>
-    </div>
 
-    <!-- welcome begins -->
-    <div id="page-welcome" class="page-welcome">
-        <div>
-            <ul class="slider-controls">
-                <li>
-                    <a id="vegas-next" class="next" href="javascript:void(0)"></a>
-                </li>
-                <li>
-                    <a id="vegas-prev" class="prev" href="javascript:void(0)"></a>
-                </li>
-            </ul>
-        </div>
-        <div class="container">
-            <div class="row">
-                <header class="centered">
-                    <h1>
-                        Joshua Darron Phillips
-                    </h1>
-                    <p>
-                        DEVELOPER RELATIONS ENGINEER
-                    </p>
-                </header>
-                <div class="social-icons">
-                    <a href="https://github.com/JoshuaDarron" target="_blank"
-                        class="btn btn-round btn-clear btn-google">
-                        <i class="fa fa-github"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/JoshuaDarron/" target="_blank"
-                        class="btn btn-round btn-clear btn-linkedin">
-                        <i class="fa fa-linkedin-square"></i>
-                    </a>
-                    <a href="https://twitter.com/JoshuaDarron" target="_blank"
-                        class="btn btn-round btn-clear btn-twitter">
-                        <i class="fa fa-twitter"></i>
-                    </a>
-                </div>
-                <a href="#contact-info" class="btn btn-default hire-me">
-                    Ask Me Anything
-                </a>
-            </div>
-        </div>
-    </div>
+	<nav>
+		<a href="#home" class="nav-brand">Joshua D. Phillips</a>
+		<div class="nav-links" id="navLinks">
+			<a href="#about">Profile</a>
+			<span class="nav-sep">/</span>
+			<a href="#experience">Experience</a>
+			<span class="nav-sep">/</span>
+			<a href="#portfolio">Portfolio</a>
+			<span class="nav-sep">/</span>
+			<a href="#contact">Contact</a>
+		</div>
+		<button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">&#9776;</button>
+	</nav>
 
-    <!-- profile begins -->
-    <div id="page-profile" class="page-profile">
-        <div class="container">
-            <header class="section-header">
-                <h2 class="section-title">
-                    Who?
-                </h2>
-                <div class="spacer"></div>
-                <p class="section-subtitle">
-                    Developer Relations Engineer from the Golden State
-                </p>
-            </header>
-            <div class="row">
-                <div class="col-md-3">
-                    <div class="profile">
-                        <img src="./assets/img/profile.jpg" alt="profile" />
-                    </div>
-                </div>
-                <div class="col-md-9">
-                    <p>
-                        I'm a Developer Relations Engineer and software builder focused on AI, data, and privacy. I
-                        come from a full-stack engineering background, with a particular love for backend systems,
-                        data-intensive applications, and solving hard problems that live just beneath the surface.
-                    </p>
-                    <p>
-                        I've spent my career working on platforms that move, protect, and make sense of large volumes
-                        of data—across industries like healthcare and enterprise data intelligence. Along the way,
-                        I've learned that the most powerful technology isn't just technically impressive, it's
-                        understandable, trustworthy, and built with real people in mind. That belief now drives my
-                        work in developer relations, where I bridge hands-on engineering with education, advocacy,
-                        and community.
-                    </p>
-                    <p>
-                        I'm especially interested in privacy-aware and local-first AI systems, and in tools that give
-                        users ownership over their data rather than treating it as a resource to extract. I'm a
-                        lifelong tinkerer, always experimenting with side projects and new ideas, and I'm motivated
-                        by building software that genuinely improves how people interact with technology.
-                    </p>
-                    <p>
-                        If you're working on thoughtful AI, developer tools, or data systems—and care about doing it
-                        the right way—I'd love to connect.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
+	<!-- HERO -->
+	<section class="hero" id="home">
+		<img src="./assets/img/profile.jpg" alt="Joshua Darron Phillips" class="hero-avatar">
+		<p class="hero-greeting">Hi, I'm Joshua</p>
+		<h1><span class="word">Building</span> <strong><span class="word">AI</span> <span
+					class="word">products,</span></strong> <em><span
+					class="word">brands,</span></em> <span class="word">and</span> <strong><span
+					class="word">experience.</span></strong></h1>
+		<a href="#experience" class="btn-outline">
+			View Experience
+			<svg viewBox="0 0 24 24">
+				<path d="M7 17L17 7M17 7H7M17 7V17" />
+			</svg>
+		</a>
+	</section>
 
-    <!-- experience begins -->
-    <div id="page-experience" class="page-experience">
-        <div class="container">
-            <header class="section-header">
-                <h2 class="section-title">
-                    <span>
-                        Experience
-                    </span>
-                </h2>
-                <div class="spacer"></div>
-                <p class="section-subtitle">
-                    Take a look at the experience I've gained over the years
-                </p>
-            </header>
-            <div class="row">
-                <div class="col-md-6">
-                    <article class="experience">
-                        <header>
-                            <h3>
-                                RocketRide AI Inc.
-                            </h3>
-                            <p>
-                                Developer Relations Engineer / San Francisco, CA / 2026 - Current
-                            </p>
-                        </header>
-                        <p>
-                            Lead developer-facing initiatives to support the adoption of RocketRide's AI pipeline
-                            platform, focused on making it easier, faster, and more cost-effective to build and deploy
-                            production-ready AI products. Work hands-on with the platform to design sample applications,
-                            reference architectures, and end-to-end use cases that demonstrate real-world AI workflows,
-                            including data ingestion, transformation, embedding generation, and deployment. Serve as a
-                            bridge between engineering, product, and the developer community by translating complex
-                            technical concepts into clear documentation, presentations, and educational content for
-                            mixed technical and non-technical audiences. Collaborate closely with internal engineering
-                            teams to provide feedback from developers, identify usability gaps, and influence product
-                            direction based on real-world usage. Support developers through workshops, demos, and
-                            direct engagement, helping teams design AI systems with an emphasis on data privacy,
-                            ownership, and responsible deployment. Through this work, contribute to improving developer
-                            experience, accelerating onboarding, and positioning RocketRide as a practical,
-                            developer-first platform for building modern AI solutions.
-                        </p>
-                    </article>
-                </div>
-                <div class="col-md-6">
-                    <article class="experience">
-                        <header>
-                            <h3>
-                                Aparavi Software AG
-                            </h3>
-                            <p>
-                                Software Engineer / Santa Monica, CA / 2022 - 2026
-                            </p>
-                        </header>
-                        <p>
-                            Lead major initiatives to introduce new features to the data intelligence automation
-                            platform. I use my expertise in Node.js, various
-                            SQL databases, and React.js to design and implement these features, and work closely with
-                            product managers, designers, and other engineers
-                            to ensure that they meet the needs of our customers. In addition to designing features, I
-                            also assist with improving the overall team
-                            process and workflow, by identifying areas for improvement and suggesting solutions to
-                            increase efficiency and productivity. We use Agile
-                            methodologies to track work, and I am responsible for managing my own tasks and ensuring
-                            that they are completed on time and within budget.
-                            Through my work, I am contributing to the development of innovative data management and
-                            protection solutions that help organizations around
-                            the world to optimize their data and protect it against loss, corruption, and cyber attacks.
-                        </p>
-                    </article>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-6">
-                    <article class="experience">
-                        <header>
-                            <h3>
-                                HOTB Software
-                            </h3>
-                            <p>
-                                Software Engineer / Irvine, CA / 2020 - 2022
-                            </p>
-                        </header>
-                        <p>
-                            Successfully generated back-end programming utilizing the full stack; Linux, Node.js, MSSQL,
-                            ArangoDB,
-                            PostgreSQL, Knex.js, JavaScript, React, Pug, jQuery frameworks and libraries.
-                            Developed enterprise-grade software to enhance the agility of companies in a multitude of
-                            fast-paced and
-                            highly competitive markets.
-                            Structure several internal systems comprising order entry/management tools,
-                            conversion/revenue
-                            reporting, and production workflow tracking, as well as design custom REST APIs built in
-                            NodeJS.
-                            Successfully installed Linux servers and virtualized environments using Docker, and Amazon
-                            Web Services.
-                            Succeeded in developing a project that facilitates the application, and allotment of
-                            government
-                            approved Covid-19 financial assistance, resulting in possible transactions of $15,000 per
-                            household.
-                        </p>
-                    </article>
-                </div>
-                <div class="col-md-6">
-                    <article class="experience">
-                        <header>
-                            <h3>
-                                Nihon Kohden
-                            </h3>
-                            <p>
-                                Software Engineer / Irvine, CA / 2020 - 2021
-                            </p>
-                        </header>
-                        <p>
-                            Architect and implement data streaming APIs to receive a constant flow of data from medical
-                            monitoring
-                            equipment to store in Microsoft SQL database for further analysis.
-                            Outline and implement API’s using Node to query and send data to frontend applications from
-                            Microsoft
-                            SQL database.
-                            Design and build frontend applications using Vue to display data from streams and API’s.
-                            Assist with building the infrastructure for a data warehouse implementation.
-                            Participate in daily Scrum meetings to thoroughly analyze projects and discuss any blockers
-                            or issues,
-                            including troubleshooting problems and accomplishing projects in a timely manner.
-                        </p>
-                    </article>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-6">
-                    <article class="experience">
-                        <header>
-                            <h3>
-                                Rogue Cloud
-                            </h3>
-                            <p>
-                                Software Engineer / San Juan Capistrano, CA / 2019
-                            </p>
-                        </header>
-                        <p>
-                            Initiate the automation of business processes for corporations using the Salesforce cloud
-                            platform. Develop enterprise-grade software to enhance the agility of companies in a
-                            multitude of fast-paced and highly
-                            competitive markets. Provide training to new junior engineers on programming concepts and
-                            syntax, as well as mentorship to student interns
-                            on career progression. Facilitate daily Scrum meeting to thoroughly analyze projects and
-                            discuss any blockers or issues, including
-                            troubleshooting problems and accomplishing projects on a timely manner. Coordinate directly
-                            with the Development Team in all phases of the project from deployment to current progress.
-                        </p>
-                    </article>
-                </div>
-                <div class="col-md-6">
-                    <article class="experience">
-                        <header>
-                            <h3>
-                                AppMakersLA
-                            </h3>
-                            <p>
-                                Project Manager Internship / Los Angeles, CA / 2016
-                            </p>
-                        </header>
-                        <p>
-                            Rendered hands-on assistance with the facilitation of full-stack applications development.
-                            Conducted close monitoring of project progress and maintenance of workflow, while assigning
-                            tasks to developers.
-                            Actively participated in client meetings to discuss application requirements and progress.
-                        </p>
-                    </article>
-                </div>
-            </div>
-        </div>
-    </div>
+	<!-- TECHNOLOGIES BAR -->
+	<div class="companies-bar">
+		<div class="container">
+			<span class="tech-name reveal">
+				<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+					<path
+						d="M16.405 5.501c-.115 0-.193.014-.274.033v.013h.014c.054.104.146.18.214.273.054.107.1.214.154.32l.014-.015c.094-.066.14-.172.14-.333-.04-.047-.046-.094-.08-.14-.04-.067-.126-.1-.18-.153zM5.77 18.695h-.927a50.854 50.854 0 00-.27-4.41h-.008l-1.41 4.41H2.45l-1.4-4.41h-.01a72.892 72.892 0 00-.195 4.41H0c.055-1.966.192-3.81.41-5.53h1.15l1.335 4.064h.008l1.347-4.064h1.095c.242 2.015.384 3.86.428 5.53zm4.017-4.08c-.378 2.045-.876 3.533-1.492 4.46-.482.716-1.01 1.073-1.583 1.073-.153 0-.34-.046-.566-.138v-.494c.11.017.24.026.386.026.268 0 .483-.075.647-.222.197-.18.295-.382.295-.605 0-.155-.077-.47-.23-.944L6.23 14.615h.91l.727 2.36c.164.536.233.91.205 1.123.4-1.064.678-2.227.835-3.483zm12.325 4.08h-2.63v-5.53h.885v4.85h1.745zm-3.32.135l-1.016-.5c.09-.076.177-.158.255-.25.433-.506.648-1.258.648-2.253 0-1.83-.718-2.746-2.155-2.746-.704 0-1.254.232-1.65.697-.43.508-.646 1.256-.646 2.245 0 .972.19 1.686.574 2.14.35.41.877.615 1.583.615.264 0 .506-.033.725-.098l1.325.772.36-.622zM15.5 17.588c-.225-.36-.337-.94-.337-1.736 0-1.393.424-2.09 1.27-2.09.443 0 .77.167.977.5.224.362.336.936.336 1.723 0 1.404-.424 2.108-1.27 2.108-.445 0-.77-.167-.978-.5zm-1.658-.425c0 .47-.172.856-.516 1.156-.344.3-.803.45-1.384.45-.543 0-1.064-.172-1.573-.515l.237-.476c.438.22.833.328 1.19.328.332 0 .593-.073.783-.22a.754.754 0 00.3-.615c0-.33-.23-.61-.648-.845-.388-.213-1.163-.657-1.163-.657-.422-.307-.632-.636-.632-1.177 0-.45.157-.81.47-1.085.315-.278.72-.415 1.22-.415.512 0 .98.136 1.4.41l-.213.476a2.726 2.726 0 00-1.064-.23c-.283 0-.502.068-.654.206a.685.685 0 00-.248.524c0 .328.234.61.666.85.393.215 1.187.67 1.187.67.433.305.648.63.648 1.168zm9.382-5.852c-.535-.014-.95.04-1.297.188-.1.04-.26.04-.274.167.055.053.063.14.11.214.08.134.218.313.346.407.14.11.28.216.427.31.26.16.555.255.81.416.145.094.293.213.44.313.073.05.12.14.214.172v-.02c-.046-.06-.06-.147-.105-.214-.067-.067-.134-.127-.2-.193a3.223 3.223 0 00-.695-.675c-.214-.146-.682-.35-.77-.595l-.013-.014c.146-.013.32-.066.46-.106.227-.06.435-.047.67-.106.106-.027.213-.06.32-.094v-.06c-.12-.12-.21-.283-.334-.395a8.867 8.867 0 00-1.104-.823c-.21-.134-.476-.22-.697-.334-.08-.04-.214-.06-.26-.127-.12-.146-.19-.34-.275-.514a17.69 17.69 0 01-.547-1.163c-.12-.262-.193-.523-.34-.763-.69-1.137-1.437-1.826-2.586-2.5-.247-.14-.543-.2-.856-.274-.167-.008-.334-.02-.5-.027-.11-.047-.216-.174-.31-.235-.38-.24-1.364-.76-1.644-.072-.18.434.267.862.422 1.082.115.153.26.328.34.5.047.116.06.235.107.356.106.294.207.622.347.897.073.14.153.287.247.413.054.073.146.107.167.227-.094.136-.1.334-.154.5-.24.757-.146 1.693.194 2.25.107.166.362.534.703.393.3-.12.234-.5.32-.835.02-.08.007-.133.048-.187v.015c.094.188.188.367.274.555.206.328.566.668.867.895.16.12.287.328.487.402v-.02h-.015c-.043-.058-.1-.086-.154-.133a3.445 3.445 0 01-.35-.4 8.76 8.76 0 01-.747-1.218c-.11-.21-.202-.436-.29-.643-.04-.08-.04-.2-.107-.24-.1.146-.247.273-.32.453-.127.288-.14.642-.188 1.01-.027.007-.014 0-.027.014-.214-.052-.287-.274-.367-.46-.2-.475-.233-1.238-.06-1.785.047-.14.247-.582.167-.716-.042-.127-.174-.2-.247-.303a2.478 2.478 0 01-.24-.427c-.16-.374-.24-.788-.414-1.162-.08-.173-.22-.354-.334-.513-.127-.18-.267-.307-.368-.52-.033-.073-.08-.194-.027-.274.014-.054.042-.075.094-.09.088-.072.335.022.422.062.247.1.455.194.662.334.094.066.195.193.315.226h.14c.214.047.455.014.655.073.355.114.675.28.962.46a5.953 5.953 0 012.085 2.286c.08.154.115.295.188.455.14.33.313.663.455.982.14.315.275.636.476.897.1.14.502.213.682.286.133.06.34.115.46.188.23.14.454.3.67.454.11.076.443.243.463.378z" />
+				</svg>
+				<span>MySQL</span>
+			</span>
+			<span class="tech-name reveal">
+				<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+					<path
+						d="M17.193 9.555c-1.264-5.58-4.252-7.414-4.573-8.115-.28-.394-.53-.954-.735-1.44-.036.495-.055.685-.523 1.184-.723.566-4.438 3.682-4.74 10.02-.282 5.912 4.27 9.435 4.888 9.884l.07.05A73.49 73.49 0 0111.91 24h.481c.114-1.032.284-2.056.51-3.07.417-.296.604-.463.85-.693a11.342 11.342 0 003.639-8.464c.01-.814-.103-1.662-.197-2.218zm-5.336 8.195s0-8.291.275-8.29c.213 0 .49 10.695.49 10.695-.381-.045-.765-1.76-.765-2.405z" />
+				</svg>
+				<span>MongoDB</span>
+			</span>
+			<span class="tech-name reveal">
+				<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+					<path
+						d="M1.125 0C.502 0 0 .502 0 1.125v21.75C0 23.498.502 24 1.125 24h21.75c.623 0 1.125-.502 1.125-1.125V1.125C24 .502 23.498 0 22.875 0zm17.363 9.75c.612 0 1.154.037 1.627.111a6.38 6.38 0 0 1 1.306.34v2.458a3.95 3.95 0 0 0-.643-.361 5.093 5.093 0 0 0-.717-.26 5.453 5.453 0 0 0-1.426-.2c-.3 0-.573.028-.819.086a2.1 2.1 0 0 0-.623.242c-.17.104-.3.229-.393.374a.888.888 0 0 0-.14.49c0 .196.053.373.156.529.104.156.252.304.443.444s.423.276.696.41c.273.135.582.274.926.416.47.197.892.407 1.266.628.374.222.695.473.963.753.268.279.472.598.614.957.142.359.214.776.214 1.253 0 .657-.125 1.21-.373 1.656a3.033 3.033 0 0 1-1.012 1.085 4.38 4.38 0 0 1-1.487.596c-.566.12-1.163.18-1.79.18a9.916 9.916 0 0 1-1.84-.164 5.544 5.544 0 0 1-1.512-.493v-2.63a5.033 5.033 0 0 0 3.237 1.2c.333 0 .624-.03.872-.09.249-.06.456-.144.623-.25.166-.108.29-.234.373-.38a1.023 1.023 0 0 0-.074-1.089 2.12 2.12 0 0 0-.537-.5 5.597 5.597 0 0 0-.807-.444 27.72 27.72 0 0 0-1.007-.436c-.918-.383-1.602-.852-2.053-1.405-.45-.553-.676-1.222-.676-2.005 0-.614.123-1.141.369-1.582.246-.441.58-.804 1.004-1.089a4.494 4.494 0 0 1 1.47-.629 7.536 7.536 0 0 1 1.77-.201zm-15.113.188h9.563v2.166H9.506v9.646H6.789v-9.646H3.375z" />
+				</svg>
+				<span>TypeScript</span>
+			</span>
+			<span class="tech-name reveal">
+				<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+					<path
+						d="M14.25.18l.9.2.73.26.59.3.45.32.34.34.25.34.16.33.1.3.04.26.02.2-.01.13V8.5l-.05.63-.13.55-.21.46-.26.38-.3.31-.33.25-.35.19-.35.14-.33.1-.3.07-.26.04-.21.02H8.77l-.69.05-.59.14-.5.22-.41.27-.33.32-.27.35-.2.36-.15.37-.1.35-.07.32-.04.27-.02.21v3.06H3.17l-.21-.03-.28-.07-.32-.12-.35-.18-.36-.26-.36-.36-.35-.46-.32-.59-.28-.73-.21-.88-.14-1.05-.05-1.23.06-1.22.16-1.04.24-.87.32-.71.36-.57.4-.44.42-.33.42-.24.4-.16.36-.1.32-.05.24-.01h.16l.06.01h8.16v-.83H6.18l-.01-2.75-.02-.37.05-.34.11-.31.17-.28.25-.26.31-.23.38-.2.44-.18.51-.15.58-.12.64-.1.71-.06.77-.04.84-.02 1.27.05zm-6.3 1.98l-.23.33-.08.41.08.41.23.34.33.22.41.09.41-.09.33-.22.23-.34.08-.41-.08-.41-.23-.33-.33-.22-.41-.09-.41.09zm13.09 3.95l.28.06.32.12.35.18.36.27.36.35.35.47.32.59.28.73.21.88.14 1.04.05 1.23-.06 1.23-.16 1.04-.24.86-.32.71-.36.57-.4.45-.42.33-.42.24-.4.16-.36.09-.32.05-.24.02-.16-.01h-8.22v.82h5.84l.01 2.76.02.36-.05.34-.11.31-.17.29-.25.25-.31.24-.38.2-.44.17-.51.15-.58.13-.64.09-.71.07-.77.04-.84.01-1.27-.04-1.07-.14-.9-.2-.73-.25-.59-.3-.45-.33-.34-.34-.25-.34-.16-.33-.1-.3-.04-.25-.02-.2.01-.13v-5.34l.05-.64.13-.54.21-.46.26-.38.3-.32.33-.24.35-.2.35-.14.33-.1.3-.06.26-.04.21-.02.13-.01h5.84l.69-.05.59-.14.5-.21.41-.28.33-.32.27-.35.2-.36.15-.36.1-.35.07-.32.04-.28.02-.21V6.07h2.09l.14.01zm-6.47 14.25l-.23.33-.08.41.08.41.23.33.33.23.41.08.41-.08.33-.23.23-.33.08-.41-.08-.41-.23-.33-.33-.23-.41-.08-.41.08z" />
+				</svg>
+				<span>Python</span>
+			</span>
+			<span class="tech-name reveal">
+				<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+					<path
+						d="M1.811 10.231c-.047 0-.058-.023-.035-.059l.246-.315c.023-.035.081-.058.128-.058h4.172c.046 0 .058.035.035.07l-.199.303c-.023.036-.082.07-.117.07zM.047 11.306c-.047 0-.059-.023-.035-.058l.245-.316c.023-.035.082-.058.129-.058h5.328c.047 0 .07.035.058.07l-.093.28c-.012.047-.058.07-.105.07zm2.828 1.075c-.047 0-.059-.035-.035-.07l.163-.292c.023-.035.07-.07.117-.07h2.337c.047 0 .07.035.07.082l-.023.28c0 .047-.047.082-.082.082zm12.129-2.36c-.736.187-1.239.327-1.963.514-.176.046-.187.058-.34-.117-.174-.199-.303-.327-.548-.444-.737-.362-1.45-.257-2.115.175-.795.514-1.204 1.274-1.192 2.22.011.935.654 1.706 1.577 1.835.795.105 1.46-.175 1.987-.77.105-.13.198-.27.315-.434H10.47c-.245 0-.304-.152-.222-.35.152-.362.432-.97.596-1.274a.315.315 0 01.292-.187h4.253c-.023.316-.023.631-.07.947a4.983 4.983 0 01-.958 2.29c-.841 1.11-1.94 1.8-3.33 1.986-1.145.152-2.209-.07-3.143-.77-.865-.655-1.356-1.52-1.484-2.595-.152-1.274.222-2.419.993-3.424.83-1.086 1.928-1.776 3.272-2.02 1.098-.2 2.15-.07 3.096.571.62.41 1.063.97 1.356 1.648.07.105.023.164-.117.2m3.868 6.461c-1.064-.024-2.034-.328-2.852-1.029a3.665 3.665 0 01-1.262-2.255c-.21-1.32.152-2.489.947-3.529.853-1.122 1.881-1.706 3.272-1.95 1.192-.21 2.314-.095 3.33.595.923.63 1.496 1.484 1.648 2.605.198 1.578-.257 2.863-1.344 3.962-.771.783-1.718 1.273-2.805 1.495-.315.06-.63.07-.934.106zm2.78-4.72c-.011-.153-.011-.27-.034-.387-.21-1.157-1.274-1.81-2.384-1.554-1.087.245-1.788.935-2.045 2.033-.21.912.234 1.835 1.075 2.21.643.28 1.285.244 1.905-.07.923-.48 1.425-1.228 1.484-2.233z" />
+				</svg>
+				<span>Go</span>
+			</span>
+			<span class="tech-name reveal">
+				<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+					<path
+						d="M24 11.986h-.027l-4.318-4.318 4.303-4.414V1.461l-.649-.648h-8.198l-.66.605v1.045L12.015.027V0L12 .014 11.986 0v.027l-1.29 1.291-.538-.539H2.035l-.638.692v1.885l.616.616h.72v5.31L.027 11.987H0L.014 12 0 12.014h.027l2.706 2.706v6.467l.907.523h2.322l1.857-1.904 4.166 4.166V24l.015-.014.014.014v-.028l2.51-2.509h.485c.111 0 .211-.07.25-.179l.146-.426c.028-.084.012-.172-.037-.239l1.462-1.462-.612 1.962c-.043.141.036.289.177.332.025.008.052.012.078.012h1.824c.106-.001.201-.064.243-.163l.165-.394c.025-.065.024-.138-.004-.203-.027-.065-.08-.116-.146-.142-.029-.012-.062-.019-.097-.02h-.075l.84-2.644h1.232l-1.016 3.221c-.043.141.036.289.176.332.025.008.052.012.079.012h2.002c.11 0 .207-.066.248-.17l.164-.428c.051-.138-.021-.29-.158-.341-.029-.011-.06-.017-.091-.017h-.145l1.131-3.673c.027-.082.012-.173-.039-.24l-.375-.504-.003-.005c-.051-.064-.127-.102-.209-.102h-1.436c-.071 0-.141.03-.19.081l-.4.439h-.624l-.042-.046 4.445-4.445H24L23.986 12l.014-.014zM9.838 21.139l1.579-4.509h-.501l.297-.304h1.659l-1.563 4.555h.623l-.079.258H9.838zm3.695-7.516l.15.151-.269.922-.225.226h-.969l-.181-.181.311-.871.288-.247h.895zM5.59 20.829H3.877l-.262-.15V3.091H2.379l-.1-.1V1.815l.143-.154h7.371l.213.214v1.108l-.142.173H8.785v8.688l8.807-8.688h-2.086l-.175-.188V1.805l.121-.111h7.49l.132.133v1.07L12.979 13.25h-.373c-.015-.001-.028 0-.042.001l-.02.003c-.045.01-.086.03-.119.06l-.343.295-.004.003c-.033.031-.059.069-.073.111l-.296.83-6.119 6.276zm14.768-3.952l.474-.519h1.334l.309.415-1.265 4.107h.493l-.08.209H19.84l1.124-3.564h-2.015l-1.077 3.391h.436l-.072.209H13.27l1.514-4.46H14.198l.091-.271h1.65l.519.537h.906l.491-.554h1.061l.489.535h.953z" />
+				</svg>
+				<span>Vim</span>
+			</span>
+			<span class="tech-name reveal">
+				<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+					<path
+						d="M16.361 10.26a.894.894 0 0 0-.558.47l-.072.148.001.207c0 .193.004.217.059.353.076.193.152.312.291.448.24.238.51.3.872.205a.86.86 0 0 0 .517-.436.752.752 0 0 0 .08-.498c-.064-.453-.33-.782-.724-.897a1.06 1.06 0 0 0-.466 0zm-9.203.005c-.305.096-.533.32-.65.639a1.187 1.187 0 0 0-.06.52c.057.309.31.59.598.667.362.095.632.033.872-.205.14-.136.215-.255.291-.448.055-.136.059-.16.059-.353l.001-.207-.072-.148a.894.894 0 0 0-.565-.472 1.02 1.02 0 0 0-.474.007Zm4.184 2c-.131.071-.223.25-.195.383.031.143.157.288.353.407.105.063.112.072.117.136.004.038-.01.146-.029.243-.02.094-.036.194-.036.222.002.074.07.195.143.253.064.052.076.054.255.059.164.005.198.001.264-.03.169-.082.212-.234.15-.525-.052-.243-.042-.28.087-.355.137-.08.281-.219.324-.314a.365.365 0 0 0-.175-.48.394.394 0 0 0-.181-.033c-.126 0-.207.03-.355.124l-.085.053-.053-.032c-.219-.13-.259-.145-.391-.143a.396.396 0 0 0-.193.032zm.39-2.195c-.373.036-.475.05-.654.086-.291.06-.68.195-.951.328-.94.46-1.589 1.226-1.787 2.114-.04.176-.045.234-.045.53 0 .294.005.357.043.524.264 1.16 1.332 2.017 2.714 2.173.3.033 1.596.033 1.896 0 1.11-.125 2.064-.727 2.493-1.571.114-.226.169-.372.22-.602.039-.167.044-.23.044-.523 0-.297-.005-.355-.045-.531-.288-1.29-1.539-2.304-3.072-2.497a6.873 6.873 0 0 0-.855-.031zm.645.937a3.283 3.283 0 0 1 1.44.514c.223.148.537.458.671.662.166.251.26.508.303.82.02.143.01.251-.043.482-.08.345-.332.705-.672.957a3.115 3.115 0 0 1-.689.348c-.382.122-.632.144-1.525.138-.582-.006-.686-.01-.853-.042-.57-.107-1.022-.334-1.35-.68-.264-.28-.385-.535-.45-.946-.03-.192.025-.509.137-.776.136-.326.488-.73.836-.963.403-.269.934-.46 1.422-.512.187-.02.586-.02.773-.002zm-5.503-11a1.653 1.653 0 0 0-.683.298C5.617.74 5.173 1.666 4.985 2.819c-.07.436-.119 1.04-.119 1.503 0 .544.064 1.24.155 1.721.02.107.031.202.023.208a8.12 8.12 0 0 1-.187.152 5.324 5.324 0 0 0-.949 1.02 5.49 5.49 0 0 0-.94 2.339 6.625 6.625 0 0 0-.023 1.357c.091.78.325 1.438.727 2.04l.13.195-.037.064c-.269.452-.498 1.105-.605 1.732-.084.496-.095.629-.095 1.294 0 .67.009.803.088 1.266.095.555.288 1.143.503 1.534.071.128.243.393.264.407.007.003-.014.067-.046.141a7.405 7.405 0 0 0-.548 1.873c-.062.417-.071.552-.071.991 0 .56.031.832.148 1.279L3.42 24h1.478l-.05-.091c-.297-.552-.325-1.575-.068-2.597.117-.472.25-.819.498-1.296l.148-.29v-.177c0-.165-.003-.184-.057-.293a.915.915 0 0 0-.194-.25 1.74 1.74 0 0 1-.385-.543c-.424-.92-.506-2.286-.208-3.451.124-.486.329-.918.544-1.154a.787.787 0 0 0 .223-.531c0-.195-.07-.355-.224-.522a3.136 3.136 0 0 1-.817-1.729c-.14-.96.114-2.005.69-2.834.563-.814 1.353-1.336 2.237-1.475.199-.033.57-.028.776.01.226.04.367.028.512-.041.179-.085.268-.19.374-.431.093-.215.165-.333.36-.576.234-.29.46-.489.822-.729.413-.27.884-.467 1.352-.561.17-.035.25-.04.569-.04.319 0 .398.005.569.04a4.07 4.07 0 0 1 1.914.997c.117.109.398.457.488.602.034.057.095.177.132.267.105.241.195.346.374.43.14.068.286.082.503.045.343-.058.607-.053.943.016 1.144.23 2.14 1.173 2.581 2.437.385 1.108.276 2.267-.296 3.153-.097.15-.193.27-.333.419-.301.322-.301.722-.001 1.053.493.539.801 1.866.708 3.036-.062.772-.26 1.463-.533 1.854a2.096 2.096 0 0 1-.224.258.916.916 0 0 0-.194.25c-.054.109-.057.128-.057.293v.178l.148.29c.248.476.38.823.498 1.295.253 1.008.231 2.01-.059 2.581a.845.845 0 0 0-.044.098c0 .006.329.009.732.009h.73l.02-.074.036-.134c.019-.076.057-.3.088-.516.029-.217.029-1.016 0-1.258-.11-.875-.295-1.57-.597-2.226-.032-.074-.053-.138-.046-.141.008-.005.057-.074.108-.152.376-.569.607-1.284.724-2.228.031-.26.031-1.378 0-1.628-.083-.645-.182-1.082-.348-1.525a6.083 6.083 0 0 0-.329-.7l-.038-.064.131-.194c.402-.604.636-1.262.727-2.04a6.625 6.625 0 0 0-.024-1.358 5.512 5.512 0 0 0-.939-2.339 5.325 5.325 0 0 0-.95-1.02 8.097 8.097 0 0 1-.186-.152.692.692 0 0 1 .023-.208c.208-1.087.201-2.443-.017-3.503-.19-.924-.535-1.658-.98-2.082-.354-.338-.716-.482-1.15-.455-.996.059-1.8 1.205-2.116 3.01a6.805 6.805 0 0 0-.097.726c0 .036-.007.066-.015.066a.96.96 0 0 1-.149-.078A4.857 4.857 0 0 0 12 3.03c-.832 0-1.687.243-2.456.698a.958.958 0 0 1-.148.078c-.008 0-.015-.03-.015-.066a6.71 6.71 0 0 0-.097-.725C8.997 1.392 8.337.319 7.46.048a2.096 2.096 0 0 0-.585-.041Zm.293 1.402c.248.197.523.759.682 1.388.03.113.06.244.069.292.007.047.026.152.041.233.067.365.098.76.102 1.24l.002.475-.12.175-.118.178h-.278c-.324 0-.646.041-.954.124l-.238.06c-.033.007-.038-.003-.057-.144a8.438 8.438 0 0 1 .016-2.323c.124-.788.413-1.501.696-1.711.067-.05.079-.049.157.013zm9.825-.012c.17.126.358.46.498.888.28.854.36 2.028.212 3.145-.019.14-.024.151-.057.144l-.238-.06a3.693 3.693 0 0 0-.954-.124h-.278l-.119-.178-.119-.175.002-.474c.004-.669.066-1.19.214-1.772.157-.623.434-1.185.68-1.382.078-.062.09-.063.159-.012z" />
+				</svg>
+				<span>Ollama</span>
+			</span>
+			<span class="tech-name reveal">
+				<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+					<path
+						d="M22.2819 9.8211a5.9847 5.9847 0 0 0-.5157-4.9108 6.0462 6.0462 0 0 0-6.5098-2.9A6.0651 6.0651 0 0 0 4.9807 4.1818a5.9847 5.9847 0 0 0-3.9977 2.9 6.0462 6.0462 0 0 0 .7427 7.0966 5.98 5.98 0 0 0 .511 4.9107 6.051 6.051 0 0 0 6.5146 2.9001A5.9847 5.9847 0 0 0 13.2599 24a6.0557 6.0557 0 0 0 5.7718-4.2058 5.9894 5.9894 0 0 0 3.9977-2.9001 6.0557 6.0557 0 0 0-.7475-7.0729zm-9.022 12.6081a4.4755 4.4755 0 0 1-2.8764-1.0408l.1419-.0804 4.7783-2.7582a.7948.7948 0 0 0 .3927-.6813v-6.7369l2.02 1.1686a.071.071 0 0 1 .038.052v5.5826a4.504 4.504 0 0 1-4.4945 4.4944zm-9.6607-4.1254a4.4708 4.4708 0 0 1-.5346-3.0137l.142.0852 4.783 2.7582a.7712.7712 0 0 0 .7806 0l5.8428-3.3685v2.3324a.0804.0804 0 0 1-.0332.0615L9.74 19.9502a4.4992 4.4992 0 0 1-6.1408-1.6464zM2.3408 7.8956a4.485 4.485 0 0 1 2.3655-1.9728V11.6a.7664.7664 0 0 0 .3879.6765l5.8144 3.3543-2.0201 1.1685a.0757.0757 0 0 1-.071 0l-4.8303-2.7865A4.504 4.504 0 0 1 2.3408 7.872zm16.5963 3.8558L13.1038 8.364 15.1192 7.2a.0757.0757 0 0 1 .071 0l4.8303 2.7913a4.4944 4.4944 0 0 1-.6765 8.1042v-5.6772a.79.79 0 0 0-.407-.667zm2.0107-3.0231l-.142-.0852-4.7735-2.7818a.7759.7759 0 0 0-.7854 0L9.409 9.2297V6.8974a.0662.0662 0 0 1 .0284-.0615l4.8303-2.7866a4.4992 4.4992 0 0 1 6.6802 4.66zM8.3065 12.863l-2.02-1.1638a.0804.0804 0 0 1-.038-.0567V6.0742a4.4992 4.4992 0 0 1 7.3757-3.4537l-.142.0805L8.704 5.459a.7948.7948 0 0 0-.3927.6813zm1.0976-2.3654l2.602-1.4998 2.6069 1.4998v2.9994l-2.5974 1.4997-2.6067-1.4997Z" />
+				</svg>
+				<span>OpenAI</span>
+			</span>
+			<span class="tech-name reveal">
+				<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+					<path
+						d="M17.3041 3.541h-3.6718l6.696 16.918H24Zm-10.6082 0L0 20.459h3.7442l1.3693-3.5527h7.0052l1.3693 3.5528h3.7442L10.5363 3.5409Zm-.3712 10.2232 2.2914-5.9456 2.2914 5.9456Z" />
+				</svg>
+				<span>Claude</span>
+			</span>
+		</div>
+	</div>
 
-    <!-- portfolio begins -->
-    <div id="page-portfolio" class="page-portfolio">
-        <div class="container">
-            <div class="row">
-                <header class="section-header">
-                    <h2 class="section-title">
-                        <span>
-                            Portfolio
-                        </span>
-                    </h2>
-                    <div class="spacer"></div>
-                    <p class="section-subtitle">
-                        Some projects I've been a part of
-                    </p>
-                </header>
-                <div id="grid-controls-wrapper">
-                    <ul class="nav nav-pills center-pills grid-controls">
-                        <li class="active filter"><a href="javascript:void(0)" data-filter="*">All</a>
-                        </li>
-                        <li class="filter"><a href="javascript:void(0)" data-filter=".node">Node</a>
-                        </li>
-                        <li class="filter"><a href="javascript:void(0)" data-filter=".npm">NPM</a>
-                        </li>
-                        <li class="filter"><a href="javascript:void(0)" data-filter=".aws">AWS</a>
-                        </li>
-                        <li class="filter"><a href="javascript:void(0)" data-filter=".sql">SQL</a>
-                        </li>
-                        <li class="filter"><a href="javascript:void(0)" data-filter=".mongo">MongoDB</a>
-                        </li>
-                        <li class="filter"><a href="javascript:void(0)" data-filter=".react">React</a>
-                        </li>
-                        <li class="filter"><a href="javascript:void(0)" data-filter=".extension">Browser Extensions</a>
-                        </li>
-                    </ul>
-                </div>
-                <div>
-                    <ul id="grid" class="grid-wrapper center-content">
-                        <li class="mix node react sql aws">
-                            <a href="https://www.aparavi.com/" target="_blank">
-                                <div class="overlay"><i class="fa fa-search"></i></div>
-                                <img src="./assets/img/portfolio/aparavi.png" alt="">
-                            </a>
-                        </li>
-                        <li class="mix node react sql aws">
-                            <a href="https://georgiarentalassistance.ga.gov/" target="_blank">
-                                <div class="overlay"><i class="fa fa-search"></i></div>
-                                <img src="./assets/img/portfolio/ga-era.png" alt="">
-                            </a>
-                        </li>
-                        <li class="mix node sql aws">
-                            <a href="https://hotbsoftware.com/corecompli/" target="_blank">
-                                <div class="overlay"><i class="fa fa-search"></i></div>
-                                <img src="./assets/img/portfolio/corecompli.png" alt="">
-                            </a>
-                        </li>
-                        <li class="mix mongo node npm">
-                            <a href="https://www.npmjs.com/package/mongooq" target="_blank">
-                                <div class="overlay"><i class="fa fa-search"></i></div>
-                                <img src="./assets/img/portfolio/mongooq.png" alt="">
-                            </a>
-                        </li>
-                        <li class="mix node vue sql">
-                            <a href="https://www.nkdhs.com/products.pl?waveform=true" target="_blank">
-                                <div class="overlay"><i class="fa fa-search"></i></div>
-                                <img src="./assets/img/portfolio/nk-lab.png" alt="">
-                            </a>
-                        </li>
-                        <li class="mix extension">
-                            <a href="https://chromewebstore.google.com/detail/csviewer/khfkmjdhickeapmgolpnmebpppdjffnl" target="_blank">
-                                <div class="overlay"><i class="fa fa-search"></i></div>
-                                <img src="./assets/img/portfolio/csviewer.png" alt="">
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
+	<!-- SERVICES -->
+	<section class="services">
+		<div class="container">
+			<p class="services-heading"><strong>Collaborate</strong> with brands and <em>agencies</em> to
+				create <strong>impactful results.</strong></p>
+			<div class="services-grid">
+				<div class="service-card reveal">
+					<div class="service-icon">
+						<svg viewBox="0 0 24 24">
+							<path
+								d="M12 20h9M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z" />
+						</svg>
+					</div>
+					<h3>Developer Relations</h3>
+					<p>Bridging engineering with education, advocacy, and developer community
+						engagement.</p>
+				</div>
+				<div class="service-card reveal">
+					<div class="service-icon">
+						<svg viewBox="0 0 24 24">
+							<rect x="5" y="2" width="14" height="20" rx="2" ry="2" />
+							<line x1="12" y1="18" x2="12.01" y2="18" />
+						</svg>
+					</div>
+					<h3>Full-Stack Engineering</h3>
+					<p>Building robust web applications with Node.js, React, SQL, and cloud
+						infrastructure.</p>
+				</div>
+				<div class="service-card reveal">
+					<div class="service-icon">
+						<svg viewBox="0 0 24 24">
+							<path
+								d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z" />
+							<polyline points="3.27 6.96 12 12.01 20.73 6.96" />
+							<line x1="12" y1="22.08" x2="12" y2="12" />
+						</svg>
+					</div>
+					<h3>Data & AI Systems</h3>
+					<p>Privacy-aware and local-first AI systems that give users ownership over their
+						data.</p>
+				</div>
+				<div class="service-card reveal">
+					<div class="service-icon">
+						<svg viewBox="0 0 24 24">
+							<polyline points="16 18 22 12 16 6" />
+							<polyline points="8 6 2 12 8 18" />
+						</svg>
+					</div>
+					<h3>Backend Systems</h3>
+					<p>Data-intensive applications, streaming APIs, and enterprise-grade backend
+						architecture.</p>
+				</div>
+			</div>
+		</div>
+	</section>
 
-    <!-- contact begins -->
-    <div id="page-contact" class="page-contact">
-        <div class="container">
-            <header class="section-header">
-                <!--            <h2 class="section-title">-->
-                <!--                <span>-->
-                <!--                    Contact-->
-                <!--                </span>-->
-                <!--            </h2>-->
-                <p class="section-subtitle">
-                    Want to get in touch? Reach out
-                </p>
-                <div class="spacer"></div>
-            </header>
-            <div class="row" id="contact-info">
-                <!-- col-sm-5 -->
-                <div class="contact-info" style="text-align: center">
-                    <h3>
-                        Contact Info
-                    </h3>
-                    <br />
-                    <p>
-                        <i class="fa fa-envelope-o"></i>
-                        <a href="mailto:phillips@joshuadarron.com" class="contact-links">
-                            phillips@joshuadarron.com
-                        </a>
-                    </p>
-                    <p>
-                        JoshuaDarron
-                        &emsp;
-                        <a href="https://www.linkedin.com/in/joshuadarron/" target="_blank" class="contact-links">
-                            <i class="fa fa-linkedin"></i>
-                        </a>
-                        &emsp;
-                        <a href="https://twitter.com/joshuadarron" target="_blank" class="contact-links">
-                            <i class="fa fa-twitter"></i>
-                        </a>
-                        &emsp;
-                        <a href="https://github.com/joshuadarron" target="_blank" class="contact-links">
-                            <i class="fa fa-github"></i>
-                        </a>
-                    </p>
-                </div>
+	<!-- ABOUT -->
+	<section class="about" id="about">
+		<div class="container">
+			<div class="about-grid reveal">
+				<img src="./assets/img/profile.jpg" alt="Joshua Darron Phillips" class="about-photo">
+				<div class="about-content">
+					<h2>Developer Relations Engineer from the <strong>Golden State</strong></h2>
+					<p>I'm a Developer Relations Engineer and software builder focused on AI, data,
+						and privacy. I come from a full-stack engineering background, with a
+						particular love for backend systems, data-intensive applications, and
+						solving hard problems that live just beneath the surface.</p>
+					<p>I've spent my career working on platforms that move, protect, and make sense
+						of large volumes of data -- across industries like healthcare and
+						enterprise data intelligence.</p>
+					<p>I'm especially interested in privacy-aware and local-first AI systems, and in
+						tools that give users ownership over their data rather than treating it
+						as a resource to extract.</p>
+					<p>If you're working on thoughtful AI, developer tools, or data systems -- and
+						care about doing it the right way -- I'd love to connect.</p>
+				</div>
+			</div>
+		</div>
+	</section>
 
-                <!--            <div class="col-sm-7">-->
-                <!--                <h3 id="form-title">-->
-                <!--                    Get in Touch-->
-                <!--                </h3>-->
-                <!--                &lt;!&ndash; Configure the contact form by adding your email address on mail/contact_me.php line 17 &ndash;&gt;-->
-                <!--                <form class="form-horizontal" id="contactForm" novalidate>-->
-                <!--                    <div class="control-group">-->
-                <!--                        <label class="control-label" for="name">-->
-                <!--                            Name-->
-                <!--                        </label>-->
-                <!--                        <div class="controls">-->
-                <!--                            <input type="text" name="name" id="name" placeholder="Your name"-->
-                <!--                                class="form-control input-lg" required-->
-                <!--                                data-validation-required-message="Please enter your name.">-->
-                <!--                            <p class="help-block text-danger"></p>-->
-                <!--                        </div>-->
-                <!--                    </div>-->
-                <!--                    <div class="control-group">-->
-                <!--                        <label class="control-label" for="email">-->
-                <!--                            Email Address-->
-                <!--                        </label>-->
-                <!--                        <div class="controls">-->
-                <!--                            <input type="email" name="email" id="email" placeholder="Your email address"-->
-                <!--                                class="form-control input-lg" required-->
-                <!--                                data-validation-required-message="Please enter your email address.">-->
-                <!--                            <p class="help-block text-danger"></p>-->
-                <!--                        </div>-->
-                <!--                    </div>-->
-                <!--                    <div class="control-group">-->
-                <!--                        <label class="control-label" for="message">-->
-                <!--                            Message-->
-                <!--                        </label>-->
-                <!--                        <div class="controls">-->
-                <!--                            <textarea name="message" id="message" rows="6" class="form-control input-lg" required-->
-                <!--                                    data-validation-required-message="Please enter a message."></textarea>-->
-                <!--                            <p class="help-block text-danger"></p>-->
-                <!--                        </div>-->
-                <!--                    </div>-->
-                <!--                    <div class="form-actions">-->
-                <!--                        <div id="success"></div>-->
-                <!--                        <button type="submit" class="btn btn-default btn-lg btn-block">-->
-                <!--                            Submit Message-->
-                <!--                        </button>-->
-                <!--                    </div>-->
-                <!--                </form>-->
-                <!--            </div>-->
-            </div>
-            <!-- End row -->
-        </div>
-    </div>
+	<!-- EXPERIENCE -->
+	<section class="experience" id="experience">
+		<div class="container">
+			<p class="section-label">Experience</p>
+			<div class="exp-grid">
+				<a href="experience.html?company=rocketride" class="exp-card-link reveal">
+					<div class="exp-card">
+						<h3>RocketRide AI Inc.</h3>
+						<div class="meta">Developer Relations Engineer &middot; San Francisco &middot;
+							2026 - Current</div>
+						<p>Lead developer-facing initiatives to support adoption of RocketRide's AI
+							pipeline platform. Design sample applications, reference architectures,
+							and end-to-end use cases demonstrating real-world AI workflows.</p>
+					</div>
+				</a>
+				<a href="experience.html?company=aparavi" class="exp-card-link reveal">
+					<div class="exp-card">
+						<h3>Aparavi Software AG</h3>
+						<div class="meta">Software Engineer &middot; Santa Monica &middot; 2022 - 2026
+						</div>
+						<p>Led major initiatives to introduce new features to the data intelligence
+							automation platform using Node.js, SQL databases, and React.js.
+							Delivered innovative data management and protection solutions.</p>
+					</div>
+				</a>
+				<a href="experience.html?company=hotb" class="exp-card-link reveal">
+					<div class="exp-card">
+						<h3>HOTB Software</h3>
+						<div class="meta">Software Engineer &middot; Irvine &middot; 2020 - 2022</div>
+						<p>Developed enterprise-grade software using Node.js, MSSQL, PostgreSQL, React,
+							and AWS. Built internal systems for order management, revenue reporting,
+							and production workflow tracking.</p>
+					</div>
+				</a>
+				<a href="experience.html?company=nihonkohden" class="exp-card-link reveal">
+					<div class="exp-card">
+						<h3>Nihon Kohden</h3>
+						<div class="meta">Software Engineer &middot; Irvine &middot; 2020 - 2021</div>
+						<p>Architected data streaming APIs to receive medical monitoring data stored in
+							MSSQL. Built frontend applications using Vue to display real-time data
+							streams.</p>
+					</div>
+				</a>
+				<a href="experience.html?company=roguecloud" class="exp-card-link reveal">
+					<div class="exp-card">
+						<h3>Rogue Cloud</h3>
+						<div class="meta">Software Engineer &middot; San Juan Capistrano &middot; 2019
+						</div>
+						<p>Automated business processes using Salesforce cloud platform. Developed
+							enterprise-grade software and provided training and mentorship to junior
+							engineers and interns.</p>
+					</div>
+				</a>
+				<a href="experience.html?company=appmakersla" class="exp-card-link reveal">
+					<div class="exp-card">
+						<h3>AppMakersLA</h3>
+						<div class="meta">Project Manager Intern &middot; Los Angeles &middot; 2016
+						</div>
+						<p>Assisted with facilitation of full-stack application development. Monitored
+							project progress and workflow while participating in client meetings.
+						</p>
+					</div>
+				</a>
+			</div>
+		</div>
+	</section>
 
-    <script src="./assets/js/jquery-2.1.3.min.js"></script>
-    <script src="./assets/js/bootstrap.min.js"></script>
-    <script src="./assets/js/jquery.nav.js"></script>
-    <script src="./assets/js/jquery.sticky.js"></script>
-    <script src="./assets/js/jquery.easypiechart.min.js"></script>
-    <script src="./assets/js/vegas.js"></script>
-    <script src="./assets/js/jquery.isotope.min.js"></script>
-    <script src="./assets/js/waypoints.min.js"></script>
-    <script src="./assets/js/jqBootstrapValidation.js"></script>
-    <script src="./assets/js/contact_me.js"></script>
-    <script src="./assets/js/main.js"></script>
+	<!-- PORTFOLIO -->
+	<section class="portfolio" id="portfolio">
+		<div class="container">
+			<p class="section-label">Portfolio</p>
+			<div class="project-grid">
+				<div class="project-card reveal">
+					<a href="https://www.aparavi.com/" target="_blank">
+						<div class="img-wrap"><img src="./assets/img/portfolio/aparavi.png"
+								alt="Aparavi"></div>
+						<div class="card-body">
+							<h3>Aparavi</h3>
+							<p>Data intelligence automation platform</p>
+							<div class="project-tags">
+								<span>Node</span><span>React</span><span>SQL</span><span>AWS</span>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="project-card reveal">
+					<a href="https://georgiarentalassistance.ga.gov/" target="_blank">
+						<div class="img-wrap"><img src="./assets/img/portfolio/ga-era.png"
+								alt="Georgia Rental Assistance"></div>
+						<div class="card-body">
+							<h3>Georgia Rental Assistance</h3>
+							<p>Government assistance platform</p>
+							<div class="project-tags">
+								<span>Node</span><span>React</span><span>SQL</span><span>AWS</span>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="project-card reveal">
+					<a href="https://hotbsoftware.com/corecompli/" target="_blank">
+						<div class="img-wrap"><img src="./assets/img/portfolio/corecompli.png"
+								alt="CoreCompli"></div>
+						<div class="card-body">
+							<h3>CoreCompli</h3>
+							<p>Compliance platform</p>
+							<div class="project-tags">
+								<span>Node</span><span>SQL</span><span>AWS</span>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="project-card reveal">
+					<a href="https://www.npmjs.com/package/mongooq" target="_blank">
+						<div class="img-wrap"><img src="./assets/img/portfolio/mongooq.png"
+								alt="MongoOQ"></div>
+						<div class="card-body">
+							<h3>MongoOQ</h3>
+							<p>NPM package for MongoDB</p>
+							<div class="project-tags">
+								<span>MongoDB</span><span>Node</span><span>NPM</span>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="project-card reveal">
+					<a href="https://www.nkdhs.com/products.pl?waveform=true" target="_blank">
+						<div class="img-wrap"><img src="./assets/img/portfolio/nk-lab.png"
+								alt="NK Lab"></div>
+						<div class="card-body">
+							<h3>NK Lab</h3>
+							<p>Medical data waveform visualization</p>
+							<div class="project-tags">
+								<span>Node</span><span>Vue</span><span>SQL</span>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="project-card reveal">
+					<a href="https://chromewebstore.google.com/detail/csviewer/khfkmjdhickeapmgolpnmebpppdjffnl"
+						target="_blank">
+						<div class="img-wrap"><img src="./assets/img/portfolio/csviewer.png"
+								alt="CSViewer"></div>
+						<div class="card-body">
+							<h3>CSViewer</h3>
+							<p>Chrome extension for CSV files</p>
+							<div class="project-tags">
+								<span>Browser Extension</span>
+							</div>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-150377889-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
+	<!-- CONTACT -->
+	<section class="contact" id="contact">
+		<div class="container">
+			<h2 class="reveal">Tell me about your<br><strong>next project</strong></h2>
+			<p class="contact-email reveal"><a
+					href="mailto:phillips@joshuadarron.com">phillips@joshuadarron.com</a></p>
+			<div class="contact-links">
+				<a href="https://www.linkedin.com/in/joshuadarron/" class="reveal" target="_blank">
+					<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+						<path
+							d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+					</svg>
+					<span>LinkedIn</span>
+				</a>
+				<a href="https://twitter.com/joshuadarron" class="reveal" target="_blank">
+					<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+						<path
+							d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+					</svg>
+					<span>Twitter</span>
+				</a>
+				<a href="https://github.com/joshuadarron" class="reveal" target="_blank">
+					<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+						<path
+							d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+					</svg>
+					<span>GitHub</span>
+				</a>
+			</div>
+		</div>
+	</section>
 
-        gtag('config', 'UA-150377889-1');
-    </script>
+	<footer>
+		&copy; 2026 Joshua Darron Phillips
+	</footer>
+
+	<script src="./assets/js/nav.js"></script>
+	<script src="./assets/js/reveal.js"></script>
+	<script src="./assets/js/hero.js"></script>
+	<script src="./assets/js/cards.js"></script>
+	<script src="./assets/js/spotlight.js"></script>
+
 </body>
 
 </html>
