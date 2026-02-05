@@ -351,6 +351,13 @@ section {
 	gap: 1.25rem;
 }
 
+.exp-card-link {
+	text-decoration: none;
+	color: inherit;
+	display: block;
+	cursor: pointer;
+}
+
 .exp-card {
 	background: var(--bg-card);
 	border: 1px solid var(--border);
@@ -359,7 +366,7 @@ section {
 	transition: border-color 0.2s, background 0.2s;
 }
 
-.exp-card:hover {
+.exp-card-link:hover .exp-card {
 	border-color: rgba(255, 255, 255, 0.15);
 	background: var(--bg-card-hover);
 }
