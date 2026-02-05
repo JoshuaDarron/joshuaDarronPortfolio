@@ -209,9 +209,10 @@ function renderExperience() {
 	// Projects
 	const projectGrid = document.getElementById("projectGrid");
 	if (exp.projects && exp.projects.length > 0) {
-		exp.projects.forEach(function (project) {
+		exp.projects.forEach(function (project, index) {
 			var card = document.createElement("div");
-			card.className = "project-card";
+			card.className = "project-card reveal";
+			card.style.setProperty("--delay", (index * 0.08) + "s");
 
 			var a = document.createElement("a");
 			if (project.link) {
@@ -257,6 +258,52 @@ function renderExperience() {
 		});
 	} else {
 		document.getElementById("projectsSection").style.display = "none";
+	}
+
+	// Initialize reveal observer for dynamically created cards
+	var revealEls = document.querySelectorAll(".reveal");
+	var observer = new IntersectionObserver(
+		function (entries) {
+			entries.forEach(function (entry) {
+				if (entry.isIntersecting) {
+					entry.target.classList.add("visible");
+					observer.unobserve(entry.target);
+				}
+			});
+		},
+		{ threshold: 0.15 }
+	);
+	revealEls.forEach(function (el) {
+		observer.observe(el);
+	});
+
+	// Initialize card tilt + glow for dynamically created cards
+	var isTouchDevice =
+		"ontouchstart" in window || navigator.maxTouchPoints > 0;
+	if (!isTouchDevice) {
+		var cards = document.querySelectorAll(".project-card");
+		cards.forEach(function (card) {
+			card.addEventListener("mousemove", function (e) {
+				var rect = card.getBoundingClientRect();
+				var x = e.clientX - rect.left;
+				var y = e.clientY - rect.top;
+				var cx = rect.width / 2;
+				var cy = rect.height / 2;
+				var rotateX = ((y - cy) / cy) * -3;
+				var rotateY = ((x - cx) / cx) * 3;
+				card.style.transform =
+					"perspective(600px) rotateX(" +
+					rotateX +
+					"deg) rotateY(" +
+					rotateY +
+					"deg)";
+				card.style.setProperty("--mouse-x", x + "px");
+				card.style.setProperty("--mouse-y", y + "px");
+			});
+			card.addEventListener("mouseleave", function () {
+				card.style.transform = "";
+			});
+		});
 	}
 }
 
