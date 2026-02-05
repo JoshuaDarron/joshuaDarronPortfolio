@@ -356,6 +356,7 @@ section {
 	color: inherit;
 	display: block;
 	cursor: pointer;
+	height: 100%;
 }
 
 .exp-card {
@@ -364,6 +365,7 @@ section {
 	border-radius: 12px;
 	padding: 1.75rem;
 	transition: border-color 0.2s, background 0.2s;
+	height: 100%;
 }
 
 .exp-card-link:hover .exp-card {
