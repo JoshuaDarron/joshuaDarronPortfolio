@@ -1,0 +1,57 @@
+/* Case study styles */
+.case-study-header {
+	margin-bottom: 3rem;
+}
+
+.case-study-header h1 {
+	font-family: var(--font-serif);
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-bottom: 0.5rem;
+}
+
+.case-study-tagline {
+	font-size: 1rem;
+	color: var(--text-muted);
+}
+
+.case-study-section {
+	margin-bottom: 2.5rem;
+	padding-top: 2rem;
+	border-top: 1px solid var(--border);
+}
+
+.case-study-section h2 {
+	font-family: var(--font-serif);
+	font-size: 1.5rem;
+	font-weight: 600;
+	margin-bottom: 1rem;
+}
+
+.case-study-section p {
+	font-size: 0.9rem;
+	color: var(--text-secondary);
+	line-height: 1.7;
+}
+
+.case-study-screenshot {
+	border-radius: 12px;
+	overflow: hidden;
+	border: 1px solid var(--border);
+}
+
+.case-study-screenshot img {
+	width: 100%;
+	display: block;
+}
+
+.case-study-cta {
+	text-align: center;
+	padding: 3rem 0;
+}
+
+@media (max-width: 768px) {
+	.case-study-header h1 {
+		font-size: 1.75rem;
+	}
+}
