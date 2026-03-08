@@ -1,4 +1,4 @@
-var CACHE_NAME = 'portfolio-v1';
+var CACHE_NAME = 'portfolio-v2';
 
 var STATIC_ASSETS = [
 	'./',
@@ -19,6 +19,7 @@ var STATIC_ASSETS = [
 	'./assets/js/timeline.js',
 	'./assets/js/analytics.js',
 	'./assets/js/experience.js',
+	'./assets/js/router.js',
 	'./assets/js/case-study.js',
 	'./favicon.svg'
 ];
@@ -55,7 +56,7 @@ self.addEventListener('fetch', function (event) {
 
 	if (request.method !== 'GET') return;
 
-	// HTML pages: network-first
+	// HTML pages: network-first, fallback to index.html for SPA routes
 	if (request.headers.get('accept') && request.headers.get('accept').includes('text/html')) {
 		event.respondWith(
 			fetch(request)
@@ -67,7 +68,9 @@ self.addEventListener('fetch', function (event) {
 					return response;
 				})
 				.catch(function () {
-					return caches.match(request);
+					return caches.match(request).then(function (cached) {
+						return cached || caches.match('./index.html');
+					});
 				})
 		);
 		return;

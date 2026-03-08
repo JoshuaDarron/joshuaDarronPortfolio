@@ -45,6 +45,7 @@
 		rel="stylesheet">
 	<link rel="stylesheet" href="./assets/css/main.css">
 	<link rel="stylesheet" href="./assets/css/animations.css">
+	<link rel="stylesheet" href="./assets/css/experience.css">
 	<script src="./assets/js/theme.js"></script>
 
 	<!-- JSON-LD Structured Data -->
@@ -75,7 +76,7 @@
 				"worksFor": {
 					"@type": "Organization",
 					"name": "RocketRide AI Inc.",
-					"url": "https://joshuadarron.com/experience.html?company=rocketride"
+					"url": "https://joshuadarron.com/experience/rocketride"
 				},
 				"knowsAbout": [
 					"Developer Relations",
@@ -585,7 +586,7 @@
 				<div class="timeline-item reveal">
 					<span class="timeline-year">2026</span>
 					<div class="timeline-marker"></div>
-					<a href="experience.html?company=rocketride" class="exp-card-link" aria-label="View experience at RocketRide AI Inc.">
+					<a href="/experience/rocketride" class="exp-card-link" aria-label="View experience at RocketRide AI Inc.">
 						<div class="exp-card">
 							<h3>RocketRide AI Inc.</h3>
 							<div class="meta">Developer Relations Engineer &middot; San Francisco &middot;
@@ -599,7 +600,7 @@
 				<div class="timeline-item right reveal">
 					<span class="timeline-year">2022</span>
 					<div class="timeline-marker"></div>
-					<a href="experience.html?company=aparavi" class="exp-card-link" aria-label="View experience at Aparavi Software AG">
+					<a href="/experience/aparavi" class="exp-card-link" aria-label="View experience at Aparavi Software AG">
 						<div class="exp-card">
 							<h3>Aparavi Software AG</h3>
 							<div class="meta">Software Engineer &middot; Santa Monica &middot; 2022 - 2026
@@ -613,7 +614,7 @@
 				<div class="timeline-item reveal">
 					<span class="timeline-year">2020</span>
 					<div class="timeline-marker"></div>
-					<a href="experience.html?company=hotb" class="exp-card-link" aria-label="View experience at HOTB Software">
+					<a href="/experience/hotb" class="exp-card-link" aria-label="View experience at HOTB Software">
 						<div class="exp-card">
 							<h3>HOTB Software</h3>
 							<div class="meta">Software Engineer &middot; Irvine &middot; 2020 - 2022</div>
@@ -626,7 +627,7 @@
 				<div class="timeline-item right reveal">
 					<span class="timeline-year">2020</span>
 					<div class="timeline-marker"></div>
-					<a href="experience.html?company=nihonkohden" class="exp-card-link" aria-label="View experience at Nihon Kohden">
+					<a href="/experience/nihonkohden" class="exp-card-link" aria-label="View experience at Nihon Kohden">
 						<div class="exp-card">
 							<h3>Nihon Kohden</h3>
 							<div class="meta">Software Engineer &middot; Irvine &middot; 2020 - 2021</div>
@@ -639,7 +640,7 @@
 				<div class="timeline-item reveal">
 					<span class="timeline-year">2019</span>
 					<div class="timeline-marker"></div>
-					<a href="experience.html?company=roguecloud" class="exp-card-link" aria-label="View experience at Rogue Cloud">
+					<a href="/experience/roguecloud" class="exp-card-link" aria-label="View experience at Rogue Cloud">
 						<div class="exp-card">
 							<h3>Rogue Cloud</h3>
 							<div class="meta">Software Engineer &middot; San Juan Capistrano &middot; 2019
@@ -653,7 +654,7 @@
 				<div class="timeline-item right reveal">
 					<span class="timeline-year">2016</span>
 					<div class="timeline-marker"></div>
-					<a href="experience.html?company=appmakersla" class="exp-card-link" aria-label="View experience at AppMakersLA">
+					<a href="/experience/appmakersla" class="exp-card-link" aria-label="View experience at AppMakersLA">
 						<div class="exp-card">
 							<h3>AppMakersLA</h3>
 							<div class="meta">Project Manager Intern &middot; Los Angeles &middot; 2016
@@ -855,6 +856,43 @@
 	</section>
 	</main>
 
+	<!-- DETAIL VIEW (SPA) -->
+	<div id="detail-view" style="display:none">
+		<header class="detail-header">
+			<a href="/#experience" class="back-link">&larr;</a>
+			<a href="/" class="nav-brand">Joshua D. Phillips</a>
+		</header>
+		<main class="detail-main" id="detail-main-content">
+			<div class="container">
+				<section class="company-header" id="companyHeader">
+					<h1 id="companyName"></h1>
+					<p class="company-meta" id="companyMeta"></p>
+				</section>
+				<section class="about-section" id="aboutSection">
+					<h2>About the Role</h2>
+					<p id="companyDescription"></p>
+					<ul class="highlights" id="highlights"></ul>
+					<div class="tech-tags" id="techTags"></div>
+				</section>
+				<section class="projects-section" id="projectsSection">
+					<h2>Projects</h2>
+					<div class="detail-project-grid" id="projectGrid"></div>
+				</section>
+				<section class="projects-section" id="videosSection">
+					<h2>Videos</h2>
+					<div class="detail-project-grid" id="videoGrid"></div>
+				</section>
+			</div>
+		</main>
+		<div class="fallback-message" id="fallbackMessage" style="display:none">
+			<div class="container">
+				<h2>Experience not found</h2>
+				<p>The requested experience page doesn't exist.</p>
+				<a href="/" class="btn-outline">Back to Home</a>
+			</div>
+		</div>
+	</div>
+
 	<footer>
 		&copy; 2026 Joshua Darron Phillips
 	</footer>
@@ -871,6 +909,8 @@
 	<script src="./assets/js/back-to-top.js"></script>
 	<script src="./assets/js/blog.js"></script>
 	<script src="./assets/js/timeline.js"></script>
+	<script src="./assets/js/experience.js"></script>
+	<script src="./assets/js/router.js"></script>
 	<script src="./assets/js/analytics.js"></script>
 	<script>
 		if ('serviceWorker' in navigator) {

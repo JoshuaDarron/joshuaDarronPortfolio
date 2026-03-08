@@ -212,16 +212,33 @@ const experiences = {
 	},
 };
 
-function renderExperience() {
-	const params = new URLSearchParams(window.location.search);
-	const slug = params.get("company");
+function clearExperience() {
+	var ids = ["highlights", "techTags", "projectGrid", "videoGrid"];
+	ids.forEach(function (id) {
+		var el = document.getElementById(id);
+		if (el) el.innerHTML = "";
+	});
+	var sections = ["projectsSection", "videosSection"];
+	sections.forEach(function (id) {
+		var el = document.getElementById(id);
+		if (el) el.style.display = "";
+	});
+	var fallback = document.getElementById("fallbackMessage");
+	if (fallback) fallback.style.display = "none";
+	// Remove any injected JSON-LD
+	var injected = document.querySelectorAll('script[data-experience-jsonld]');
+	injected.forEach(function (el) { el.remove(); });
+}
 
+function renderExperience(slug) {
 	if (!slug || !experiences[slug]) {
 		document.querySelector(".detail-main").style.display = "none";
 		document.getElementById("fallbackMessage").style.display = "flex";
 		document.querySelector(".detail-header").style.display = "none";
 		return;
 	}
+	document.querySelector(".detail-main").style.display = "";
+	document.querySelector(".detail-header").style.display = "";
 
 	const exp = experiences[slug];
 
@@ -232,7 +249,7 @@ function renderExperience() {
 	document.getElementById("companyDescription").textContent = exp.description;
 
 	// Update meta tags dynamically
-	var pageUrl = "https://joshuadarron.com/experience.html?company=" + slug;
+	var pageUrl = "https://joshuadarron.com/experience/" + slug;
 	var metaDesc = exp.title + " at " + exp.company + " (" + exp.period + ", " + exp.location + "). " + exp.description.substring(0, 150) + "...";
 
 	var descEl = document.getElementById("metaDescription");
@@ -311,6 +328,7 @@ function renderExperience() {
 
 	var scriptEl = document.createElement("script");
 	scriptEl.type = "application/ld+json";
+	scriptEl.setAttribute("data-experience-jsonld", "");
 	scriptEl.textContent = JSON.stringify(jsonLd);
 	document.head.appendChild(scriptEl);
 
@@ -445,4 +463,4 @@ function renderExperience() {
 	}
 }
 
-document.addEventListener("DOMContentLoaded", renderExperience);
+// renderExperience(slug) and clearExperience() are called by router.js

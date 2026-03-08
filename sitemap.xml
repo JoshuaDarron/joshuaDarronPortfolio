@@ -6,68 +6,33 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://joshuadarron.com/experience.html?company=rocketride</loc>
+    <loc>https://joshuadarron.com/experience/rocketride</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://joshuadarron.com/experience.html?company=aparavi</loc>
+    <loc>https://joshuadarron.com/experience/aparavi</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://joshuadarron.com/experience.html?company=hotb</loc>
+    <loc>https://joshuadarron.com/experience/hotb</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://joshuadarron.com/experience.html?company=nihonkohden</loc>
+    <loc>https://joshuadarron.com/experience/nihonkohden</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://joshuadarron.com/experience.html?company=roguecloud</loc>
+    <loc>https://joshuadarron.com/experience/roguecloud</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://joshuadarron.com/experience.html?company=appmakersla</loc>
+    <loc>https://joshuadarron.com/experience/appmakersla</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://joshuadarron.com/blog-post.html?slug=example-post</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://joshuadarron.com/case-study.html?project=aparavi</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://joshuadarron.com/case-study.html?project=ga-era</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://joshuadarron.com/case-study.html?project=corecompli</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://joshuadarron.com/case-study.html?project=mongooq</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://joshuadarron.com/case-study.html?project=nk-lab</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://joshuadarron.com/case-study.html?project=csviewer</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
   </url>
 </urlset>
