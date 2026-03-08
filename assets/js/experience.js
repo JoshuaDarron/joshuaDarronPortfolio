@@ -347,10 +347,17 @@ function renderExperience() {
 				var imgWrap = document.createElement("div");
 				imgWrap.className = "img-wrap";
 				if (item.image) {
+					var picture = document.createElement("picture");
+					var webpSrc = item.image.replace(/\.(png|jpg|jpeg)$/i, ".webp");
+					var source = document.createElement("source");
+					source.srcset = webpSrc;
+					source.type = "image/webp";
+					picture.appendChild(source);
 					var img = document.createElement("img");
 					img.src = item.image;
 					img.alt = item.name;
-					imgWrap.appendChild(img);
+					picture.appendChild(img);
+					imgWrap.appendChild(picture);
 				}
 				a.appendChild(imgWrap);
 

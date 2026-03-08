@@ -83,20 +83,23 @@
 /* STEP 5: Card magnetic tilt */
 .service-card,
 .exp-card,
-.project-card {
+.project-card,
+.testimonial-card {
 	transition: border-color 0.2s, background 0.2s, transform 0.15s ease;
 }
 
 /* STEP 6: Card glow border */
 .service-card,
-.exp-card {
+.exp-card,
+.testimonial-card {
 	position: relative;
 	overflow: hidden;
 }
 
 .service-card::before,
 .exp-card::before,
-.project-card::before {
+.project-card::before,
+.testimonial-card::before {
 	content: '';
 	position: absolute;
 	inset: 0;
@@ -109,7 +112,8 @@
 
 .service-card:hover::before,
 .exp-card:hover::before,
-.project-card:hover::before {
+.project-card:hover::before,
+.testimonial-card:hover::before {
 	opacity: 1;
 }
 
@@ -269,7 +273,34 @@ body::before {
 
 	.service-card::before,
 	.exp-card::before,
-	.project-card::before {
+	.project-card::before,
+	.testimonial-card::before {
 		display: none;
+	}
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+	}
+
+	.reveal {
+		opacity: 1;
+		transform: none;
+	}
+
+	.word {
+		opacity: 1;
+		transform: none;
+	}
+
+	html {
+		scroll-behavior: auto;
 	}
 }

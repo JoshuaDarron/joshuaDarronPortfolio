@@ -1,0 +1,13 @@
+{
+  "name": "joshua-phillips-portfolio",
+  "version": "2.1.0",
+  "description": "Portfolio website for Joshua Darron Phillips",
+  "private": true,
+  "scripts": {
+    "dev": "npx serve .",
+    "minify:css": "npx clean-css-cli -o dist/assets/css/main.min.css assets/css/main.css && npx clean-css-cli -o dist/assets/css/animations.min.css assets/css/animations.css && npx clean-css-cli -o dist/assets/css/experience.min.css assets/css/experience.css && npx clean-css-cli -o dist/assets/css/blog.min.css assets/css/blog.css && npx clean-css-cli -o dist/assets/css/case-study.min.css assets/css/case-study.css",
+    "minify:js": "npx terser assets/js/nav.js -o dist/assets/js/nav.min.js && npx terser assets/js/reveal.js -o dist/assets/js/reveal.min.js && npx terser assets/js/hero.js -o dist/assets/js/hero.min.js && npx terser assets/js/cards.js -o dist/assets/js/cards.min.js && npx terser assets/js/spotlight.js -o dist/assets/js/spotlight.min.js && npx terser assets/js/theme.js -o dist/assets/js/theme.min.js && npx terser assets/js/back-to-top.js -o dist/assets/js/back-to-top.min.js && npx terser assets/js/blog.js -o dist/assets/js/blog.min.js && npx terser assets/js/timeline.js -o dist/assets/js/timeline.min.js && npx terser assets/js/analytics.js -o dist/assets/js/analytics.min.js && npx terser assets/js/experience.js -o dist/assets/js/experience.min.js && npx terser assets/js/case-study.js -o dist/assets/js/case-study.min.js",
+    "images:webp": "echo 'Convert images with: cwebp -q 80 input.png -o output.webp (requires cwebp CLI)'",
+    "build": "npm run minify:css && npm run minify:js"
+  }
+}

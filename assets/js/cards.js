@@ -3,7 +3,7 @@
 	var isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
 	if (isTouchDevice) return;
 
-	var cards = document.querySelectorAll('.service-card, .exp-card, .project-card');
+	var cards = document.querySelectorAll('.service-card, .exp-card, .project-card, .testimonial-card');
 	cards.forEach(function (card) {
 		card.addEventListener('mousemove', function (e) {
 			var rect = card.getBoundingClientRect();
