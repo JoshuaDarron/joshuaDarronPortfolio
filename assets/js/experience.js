@@ -7,11 +7,12 @@ const experiences = {
 		description:
 			"Leading developer-facing initiatives to drive adoption of RocketRide's AI pipeline platform, focused on making it easier and more cost-effective to build and deploy production-ready AI products. Working hands-on with the platform to design sample applications, reference architectures, and end-to-end use cases spanning data ingestion, transformation, embedding generation, and deployment. Serving as the bridge between engineering, product, and the developer community by translating complex technical concepts into clear documentation, presentations, and educational content for both technical and non-technical audiences.",
 		highlights: [
-			"Design sample applications and reference architectures demonstrating real-world AI workflows",
-			"Translate complex platform concepts into clear documentation, tutorials, and presentations",
+			"Built and published the RocketRide Python SDK and Node.js SDK, available on PyPI and npm",
+			"Developed the RocketRide MCP stdio server for streaming local files to RocketRide EaaS",
+			"Contributed to the open source RocketRide Server and authored the official platform documentation",
+			"Produced video content demonstrating open source benchmarking of GPT, Claude, Gemini, and Grok",
 			"Collaborate with engineering teams to surface developer feedback, identify usability gaps, and influence product direction",
 			"Support developers through workshops, demos, and direct engagement with emphasis on data privacy and responsible deployment",
-			"Contribute to improving developer experience, accelerating onboarding, and positioning the platform as developer-first",
 		],
 		technologies: [
 			"Python",
@@ -21,7 +22,47 @@ const experiences = {
 			"Docker",
 			"REST API",
 		],
-		projects: [],
+		videos: [
+			{
+				name: "RocketRide: The Open Source Way to Benchmark GPT, Claude, Gemini, and Grok",
+				description: "YouTube video walkthrough of RocketRide's open source benchmarking capabilities",
+				tech: ["AI/ML", "Benchmarking", "Open Source"],
+				image: "https://img.youtube.com/vi/pq2eRW_0D0Q/hqdefault.jpg",
+				link: "https://www.youtube.com/watch?v=pq2eRW_0D0Q",
+			},
+		],
+		projects: [
+			{
+				name: "rocketride (PyPI)",
+				description: "RocketRide Pipeline Python Client SDK for executing data processing pipelines via async/WebSocket",
+				tech: ["Python", "WebSocket", "SDK"],
+				link: "https://pypi.org/project/rocketride/",
+			},
+			{
+				name: "rocketride-mcp (PyPI)",
+				description: "RocketRide MCP stdio server that streams local files to RocketRide EaaS",
+				tech: ["Python", "MCP", "Streaming"],
+				link: "https://pypi.org/project/rocketride-mcp/",
+			},
+			{
+				name: "rocketride (npm)",
+				description: "RocketRide Pipeline Node.js Client SDK",
+				tech: ["TypeScript", "Node.js", "SDK"],
+				link: "https://www.npmjs.com/package/rocketride",
+			},
+			{
+				name: "rocketride-server (GitHub)",
+				description: "RocketRide server application source code",
+				tech: ["Open Source", "Docker", "REST API"],
+				link: "https://github.com/rocketride-org/rocketride-server",
+			},
+			{
+				name: "RocketRide Docs",
+				description: "Official RocketRide platform documentation",
+				tech: ["Documentation", "Developer Experience"],
+				link: "https://docs.rocketride.org/",
+			},
+		],
 	},
 	aparavi: {
 		company: "Aparavi Software AG",
@@ -289,59 +330,66 @@ function renderExperience() {
 		techContainer.appendChild(span);
 	});
 
-	// Projects
-	const projectGrid = document.getElementById("projectGrid");
-	if (exp.projects && exp.projects.length > 0) {
-		exp.projects.forEach(function (project, index) {
-			var card = document.createElement("div");
-			card.className = "project-card reveal";
-			card.style.setProperty("--delay", (index * 0.08) + "s");
+	// Render cards into a grid
+	function renderCards(items, gridEl, sectionId) {
+		if (items && items.length > 0) {
+			items.forEach(function (item, index) {
+				var card = document.createElement("div");
+				card.className = "project-card reveal";
+				card.style.setProperty("--delay", (index * 0.08) + "s");
 
-			var a = document.createElement("a");
-			if (project.link) {
-				a.href = project.link;
-				a.target = "_blank";
-			}
+				var a = document.createElement("a");
+				if (item.link) {
+					a.href = item.link;
+					a.target = "_blank";
+				}
 
-			var imgWrap = document.createElement("div");
-			imgWrap.className = "img-wrap";
-			if (project.image) {
-				var img = document.createElement("img");
-				img.src = project.image;
-				img.alt = project.name;
-				imgWrap.appendChild(img);
-			}
-			a.appendChild(imgWrap);
+				var imgWrap = document.createElement("div");
+				imgWrap.className = "img-wrap";
+				if (item.image) {
+					var img = document.createElement("img");
+					img.src = item.image;
+					img.alt = item.name;
+					imgWrap.appendChild(img);
+				}
+				a.appendChild(imgWrap);
 
-			var body = document.createElement("div");
-			body.className = "card-body";
+				var body = document.createElement("div");
+				body.className = "card-body";
 
-			var h3 = document.createElement("h3");
-			h3.textContent = project.name;
-			body.appendChild(h3);
+				var h3 = document.createElement("h3");
+				h3.textContent = item.name;
+				body.appendChild(h3);
 
-			var p = document.createElement("p");
-			p.textContent = project.description;
-			body.appendChild(p);
+				var p = document.createElement("p");
+				p.textContent = item.description;
+				body.appendChild(p);
 
-			if (project.tech && project.tech.length > 0) {
-				var tags = document.createElement("div");
-				tags.className = "project-tags";
-				project.tech.forEach(function (t) {
-					var span = document.createElement("span");
-					span.textContent = t;
-					tags.appendChild(span);
-				});
-				body.appendChild(tags);
-			}
+				if (item.tech && item.tech.length > 0) {
+					var tags = document.createElement("div");
+					tags.className = "project-tags";
+					item.tech.forEach(function (t) {
+						var span = document.createElement("span");
+						span.textContent = t;
+						tags.appendChild(span);
+					});
+					body.appendChild(tags);
+				}
 
-			a.appendChild(body);
-			card.appendChild(a);
-			projectGrid.appendChild(card);
-		});
-	} else {
-		document.getElementById("projectsSection").style.display = "none";
+				a.appendChild(body);
+				card.appendChild(a);
+				gridEl.appendChild(card);
+			});
+		} else {
+			document.getElementById(sectionId).style.display = "none";
+		}
 	}
+
+	// Videos
+	renderCards(exp.videos, document.getElementById("videoGrid"), "videosSection");
+
+	// Projects
+	renderCards(exp.projects, document.getElementById("projectGrid"), "projectsSection");
 
 	// Initialize reveal observer for dynamically created cards
 	var revealEls = document.querySelectorAll(".reveal");
